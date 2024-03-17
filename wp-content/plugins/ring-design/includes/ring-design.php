@@ -6,6 +6,8 @@ add_action('rest_api_init', 'create_rest_endpoint');
 
 add_action('wp_enqueue_scripts', 'enqueue_scripts');
 
+add_action('init', 'create_submissions_page');
+
 function show_ring_design_form()
 {
     ob_start();
@@ -26,18 +28,34 @@ function enqueue_scripts()
     wp_enqueue_script('jquery');
 }
 
+function create_submissions_page()
+{
+    $args = [
+        'public' => true, 
+        'has_archive' => true, 
+        'labels' => [
+            'name' => 'Submissions', 
+            'singular_name' => 'Submission'
+        ],
+        //'capabilities' => [ 'create_posts' => 'do_not_allow'],
+        'supports' => ['custom-fields']
+    ];
+
+    register_post_type('Subission', $args);
+}
+
 function handle_enquiry($data)
 {
     $params = $data->get_params();
-    
-    if( !wp_verify_nonce($params['_wpnonce'], 'wp_rest' )){
+
+    if (!wp_verify_nonce($params['_wpnonce'], 'wp_rest')) {
         return new WP_REST_Response('Sorry! Message Not Sent', 422);
     }
 
     unset($params['_wpnonce']);
     unset($params['_wp_http_referer']);
 
-    $headers = []; 
+    $headers = [];
     $admin_email = get_bloginfo('admin_email');
     $admin_name = get_bloginfo('name');
 
@@ -48,14 +66,21 @@ function handle_enquiry($data)
     $message = '';
     $message = "<h1> Message has been sent from:" . $params['name'] . "</h1>";
 
-    $subject = 'New enquiery from:'. $params['name'];
+    $subject = 'New enquiery from:' . $params['name'];
 
-    foreach($params as $label => $value){
-        $message = '<strong>' . ucfirst($label) . '</strong: ' . $value . '<br>';        
+    $postarr = [
+        'post_title' => $params['fname'],
+        'post_type'  => 'Subission',
+    ];
+
+    $post_id = wp_insert_post($postarr);
+
+    foreach ($params as $label => $value) {
+        $message = '<strong>' . ucfirst($label) . '</strong: ' . $value . '<br>';
+        add_post_meta($post_id, $label, $value);
     }
 
     wp_mail($admin_email, $subject, $message, $headers);
 
     return new WP_REST_Response('Great! Message Sent Successfully', 200);
 }
-
