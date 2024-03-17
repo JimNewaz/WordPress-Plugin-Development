@@ -22,6 +22,12 @@ if(!class_exists('CustomRingDesign')){
 
             require_once(MY_PLUGIN_PATH. '/vendor/autoload.php');
         }
+
+        public function initialize(){
+
+        }
     }
-new CustomRingDesign;
+    
+    $customRingDesign = new CustomRingDesign;
+    $customRingDesign->initialize();
 }
