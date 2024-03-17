@@ -26,8 +26,36 @@ function enqueue_scripts()
     wp_enqueue_script('jquery');
 }
 
-function handle_enquiry()
+function handle_enquiry($data)
 {
-    echo 'Hello';
+    $params = $data->get_params();
+    
+    if( !wp_verify_nonce($params['_wpnonce'], 'wp_rest' )){
+        return new WP_REST_Response('Sorry! Message Not Sent', 422);
+    }
+
+    unset($params['_wpnonce']);
+    unset($params['_wp_http_referer']);
+
+    $headers = []; 
+    $admin_email = get_bloginfo('admin_email');
+    $admin_name = get_bloginfo('name');
+
+    $headers[] = "From: " . $admin_email . $admin_name;
+    $headers[] = "Reply-to: " . $params['name'] . $params['email'];
+    $headers[] = "Content-Type: text/html";
+
+    $message = '';
+    $message = "<h1> Message has been sent from:" . $params['name'] . "</h1>";
+
+    $subject = 'New enquiery from:'. $params['name'];
+
+    foreach($params as $label => $value){
+        $message = '<strong>' . ucfirst($label) . '</strong: ' . $value . '<br>';        
+    }
+
+    wp_mail($admin_email, $subject, $message, $headers);
+
+    return new WP_REST_Response('Great! Message Sent Successfully', 200);
 }
 
