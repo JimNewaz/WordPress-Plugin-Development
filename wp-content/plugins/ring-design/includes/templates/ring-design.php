@@ -1,3 +1,6 @@
+<?php 
+    if(get_plugin_options('ring_design_plugin_active')):
+?>
 <form id="enquiry_form">
     <?php wp_nonce_field('wp_rest');?>
 
@@ -43,3 +46,6 @@
     });
 </script>
 
+<?php else: ?>
+    This form is not active
+<?php endif; ?>

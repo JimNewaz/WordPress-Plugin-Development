@@ -63,7 +63,7 @@ function display_submissions()
         echo '<li> <strong>' . ucfirst($key) . '</strong>: <br>' . esc_html($value[0]) . '</li>';
     }
 
-    echo '</ul>' ;
+    echo '</ul>';
 }
 
 
@@ -83,7 +83,7 @@ function create_rest_endpoint()
 }
 
 function enqueue_scripts()
-{   
+{
     wp_enqueue_style('ring-design-plugin', MY_PLUGIN_URL . 'assets/css/ring-design-plugin.css');
     wp_enqueue_script('jquery');
 }
@@ -94,9 +94,11 @@ function create_submissions_page()
         'public' => true,
         'has_archive' => true,
         'labels' => [
-            'name' => 'Submissions',
-            'singular_name' => 'Submission'
+            'name' => 'Ring Submissions',
+            'singular_name' => 'Ring Submission',
+            'edit_item' => 'View Submission'
         ],
+        'publicly_queryable' => false,
         // 'supports' => ['custom-fields']
         'supports' => false,
         'capability_type' => 'post',
@@ -116,7 +118,7 @@ function handle_enquiry($data)
 {
     $params = $data->get_params();
 
-    $field_fname = sanitize_text_field($params['fname']); 
+    $field_fname = sanitize_text_field($params['fname']);
     $field_lname = sanitize_text_field($params['lname']);
     $field_email = sanitize_email($params['email']);
     $field_phone = sanitize_text_field($params['phone']);
@@ -131,6 +133,12 @@ function handle_enquiry($data)
     $headers = [];
     $admin_email = get_bloginfo('admin_email');
     $admin_name = get_bloginfo('name');
+
+    $reciepient_email = get_plugin_options('ring_design_recipient_email');
+
+    if (!$reciepient_email) {
+        $reciepient_email = $admin_email;
+    }
 
     $headers[] = "From: " . $admin_email . $admin_name;
     $headers[] = "Reply-to: " . $field_fname . $field_email;
@@ -150,14 +158,14 @@ function handle_enquiry($data)
     $post_id = wp_insert_post($postarr);
 
     foreach ($params as $label => $value) {
-        
-        
-        switch($label){
+
+
+        switch ($label) {
             case 'email':
                 $value = sanitize_email($value);
                 break;
-            
-            default: 
+
+            default:
                 $value = sanitize_text_field($value);
         }
 
@@ -165,7 +173,7 @@ function handle_enquiry($data)
         $message = '<strong>' . sanitize_text_field(ucfirst($label)) . '</strong: ' . $value . '<br>';
     }
 
-    wp_mail($admin_email, $subject, $message, $headers);
+    wp_mail($reciepient_email, $subject, $message, $headers);
 
     return new WP_REST_Response('Great! Message Sent Successfully', 200);
 }
