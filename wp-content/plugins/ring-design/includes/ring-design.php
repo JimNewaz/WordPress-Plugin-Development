@@ -98,8 +98,7 @@ function create_submissions_page()
             'singular_name' => 'Ring Submission',
             'edit_item' => 'View Submission'
         ],
-        'publicly_queryable' => false,
-        // 'supports' => ['custom-fields']
+        'publicly_queryable' => false,        
         'supports' => false,
         'capability_type' => 'post',
         'capabilities' => array(
