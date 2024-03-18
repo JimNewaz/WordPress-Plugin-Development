@@ -11,6 +11,42 @@ add_action('init', 'create_submissions_page');
 add_action('add_meta_boxes', 'create_meta_box');
 
 
+// add_filter('manage_submission_posts_columns', 'custom_submissions_columns');
+
+// add_action('manage_submission_posts_custom_columns', 'fill_submission_columns', 12, 2);
+
+// function fill_submission_columns($columns, $post_id){
+//     switch($columns)
+//     {
+//         case 'fname':
+//             echo get_post_meta($post_id, 'fname', true);
+//         break;
+
+//         case 'lname':
+//             echo get_post_meta($post_id, 'lname', true);
+//         break;
+
+//         case 'email':
+//             echo get_post_meta($post_id, 'email', true);
+//         break;
+
+//         case 'phone':
+//             echo get_post_meta($post_id, 'phone', true);
+//         break;
+//     }   
+// }
+
+// function custom_submissions_columns($columns){
+//     $columns = array(
+//         'cb' => $columns['cb'],
+//         'fname' => __('First Name','ringdesign-plugin' ), 
+//         'lname' => __('Last Name','ringdesign-plugin' ), 
+//         'email' => __('Email', 'ringdesign-plugin'),
+//         'phone' =>  __('Phone', 'ringdesign-plugin'),
+//     );
+//     return $columns;
+// }
+
 function create_meta_box()
 {
     add_meta_box('custom_ring_design_form', 'Submissions', 'display_submissions', 'submission');
@@ -47,7 +83,8 @@ function create_rest_endpoint()
 }
 
 function enqueue_scripts()
-{
+{   
+    wp_enqueue_style('ring-design-plugin', MY_PLUGIN_URL . 'assets/css/ring-design-plugin.css');
     wp_enqueue_script('jquery');
 }
 
