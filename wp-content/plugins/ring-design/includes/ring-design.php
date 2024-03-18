@@ -60,10 +60,10 @@ function display_submissions()
     echo '<ul>';
 
     foreach ($post_metas as $key => $value) {
-        echo '<li> <strong>' . ucfirst($key) . '</strong>: <br>' . $value[0] . '</li>';
+        echo '<li> <strong>' . ucfirst($key) . '</strong>: <br>' . esc_html($value[0]) . '</li>';
     }
 
-    echo '</ul>';
+    echo '</ul>' ;
 }
 
 
@@ -116,6 +116,11 @@ function handle_enquiry($data)
 {
     $params = $data->get_params();
 
+    $field_fname = sanitize_text_field($params['fname']); 
+    $field_lname = sanitize_text_field($params['lname']);
+    $field_email = sanitize_email($params['email']);
+    $field_phone = sanitize_text_field($params['phone']);
+
     if (!wp_verify_nonce($params['_wpnonce'], 'wp_rest')) {
         return new WP_REST_Response('Sorry! Message Not Sent', 422);
     }
@@ -128,16 +133,16 @@ function handle_enquiry($data)
     $admin_name = get_bloginfo('name');
 
     $headers[] = "From: " . $admin_email . $admin_name;
-    $headers[] = "Reply-to: " . $params['name'] . $params['email'];
+    $headers[] = "Reply-to: " . $field_fname . $field_email;
     $headers[] = "Content-Type: text/html";
 
     $message = '';
-    $message = "<h1> Message has been sent from:" . $params['name'] . "</h1>";
+    $message = "<h1> Message has been sent from:" . $field_fname . "</h1>";
 
-    $subject = 'New enquiery from:' . $params['name'];
+    $subject = 'New enquiery from:' . $field_fname;
 
     $postarr = [
-        'post_title' => $params['fname'],
+        'post_title' => $field_fname,
         'post_type'  => 'submission',
         'post_status' => 'publish'
     ];
@@ -145,8 +150,19 @@ function handle_enquiry($data)
     $post_id = wp_insert_post($postarr);
 
     foreach ($params as $label => $value) {
-        $message = '<strong>' . ucfirst($label) . '</strong: ' . $value . '<br>';
-        add_post_meta($post_id, $label, $value);
+        
+        
+        switch($label){
+            case 'email':
+                $value = sanitize_email($value);
+                break;
+            
+            default: 
+                $value = sanitize_text_field($value);
+        }
+
+        add_post_meta($post_id, $label, sanitize_text_field($value));
+        $message = '<strong>' . sanitize_text_field(ucfirst($label)) . '</strong: ' . $value . '<br>';
     }
 
     wp_mail($admin_email, $subject, $message, $headers);
