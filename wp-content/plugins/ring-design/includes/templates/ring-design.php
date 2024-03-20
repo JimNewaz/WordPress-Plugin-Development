@@ -20,9 +20,9 @@
             <!-- TITLE -->
             <div class="col-lg-4 offset-lg-1 mx-0 px-0">
                 <!-- TITLE -->
-
                 <div id="title-container">
-                    <img class="covid-image" src="./img/covid-check.png">
+                    <img class="covid-image" src="../asstes/img/ring.png">
+                    
                     <h2>DESIGN YOUR RING</h2>
 
                     <p>Design the most beautiful engagement or cocktail ring! We use only the finest quality diamonds
@@ -40,6 +40,7 @@
                 </div>
                 <div id="qbox-container">
                     <form class="needs-validation" id="form-wrapper" method="post" name="form-wrapper" novalidate="">
+                        <?php wp_nonce_field('wp_rest');?>
                         <div id="steps-container">
 
                             <!-- Personal Information -->
@@ -247,50 +248,6 @@
 
 </html>
 
-{% comment %} <form id="enquiry_form">
-    <?php wp_nonce_field('wp_rest');?>
-
-    <label for="fname">First name:</label><br>
-    <input type="text" id="fname" name="fname" value="Mike"><br><br>
-
-    <label for="lname">Last name:</label><br>
-    <input type="text" id="lname" name="lname" value="Walker"><br><br>
-
-    <label for="email">Email:</label><br>
-    <input type="email" id="email" name="email" value=""><br><br>
-
-    <label for="phone">Phone</label><br>
-    <input type="number" id="phone" name="phone" value="12346789"><br><br>
-
-    <button type="submit">Submit</button>
-</form>
-
-<div id="form-success"></div>
-<div id="form-error"></div> {% endcomment %}
-
-<script>
-    jQuery(document).ready(function ($) {
-        $('#enquiry_form').submit(function (event) {
-
-            event.preventDefault();
-            var form = $(this);
-
-            $.ajax({
-                type: 'POST',
-                url: "<?php echo get_rest_url(null, 'v1/ring-design/submit'); ?>",
-                data: form.serialize(),
-                success: function (response) {
-                    form.hide();
-                    $('#form-success').html(response).fadeIn();
-                },
-                error: function () {
-                    $('#form-error').html('Sorry something is wr').fadeIn();
-                }
-            });
-
-        });
-    });
-</script>
 
 <?php else: ?>
 This form is not active

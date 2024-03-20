@@ -98,3 +98,27 @@ submitBtn.addEventListener('click', () => {
         })
 
 });
+
+
+
+jQuery(document).ready(function ($) {
+    $('#enquiry_form').submit(function (event) {
+
+        event.preventDefault();
+        var form = $(this);
+
+        $.ajax({
+            type: 'POST',
+            url: "<?php echo get_rest_url(null, 'v1/ring-design/submit'); ?>",
+            data: form.serialize(),
+            success: function (response) {
+                form.hide();
+                $('#form-success').html(response).fadeIn();
+            },
+            error: function () {
+                $('#form-error').html('Sorry something is wr').fadeIn();
+            }
+        });
+
+    });
+});
