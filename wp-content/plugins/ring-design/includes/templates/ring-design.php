@@ -72,7 +72,7 @@
                                     <h4>SELECT CENTRE STONE</h4>
                                     <div class="radio-buttons">
                                         <label class="custom-radio">
-                                            <input type="radio" name="ring_stone" checked>
+                                            <input type="radio" name="ring_stone" >
                                             <span class="radio-btn"><i class="las la-check"></i>
                                                 <div class="hobbies-icon">
                                                     <img
@@ -117,7 +117,7 @@
                                         </label>
 
                                         <label class="custom-radio">
-                                            <input type="radio" name="ring_stone" checked>
+                                            <input type="radio" name="ring_stone" >
                                             <span class="radio-btn"><i class="las la-check"></i>
                                                 <div class="hobbies-icon">
                                                     <img
@@ -144,7 +144,7 @@
                                                 <div class="hobbies-icon">
                                                     <img
                                                         src="https://shinyrockpolished.com/wp-content/themes/Avada-Child-Theme/img/stone_5.png">
-                                                   
+                                                    
                                                 </div>
                                             </span>
                                             <p class="f-12label">TANZANITE</p>
@@ -198,13 +198,12 @@
                             </div>
 
 
-                            <div class="step">
-                                <h4>Select Ring Shape</h4>
-                                <div class="main-container">
-                                    <h4>SELECT CENTRE STONE</h4>
+                            <div class="step">                                
+                                <div class="main-container">     
+                                    <h4>SELECT RING SHAPE</h4>                               
                                     <div class="radio-buttons">
                                         <label class="custom-radio">
-                                            <input type="radio" name="ring_shape" checked>
+                                            <input type="radio" name="ring_shape" >
                                             <span class="radio-btn"><i class="las la-check"></i>
                                                 <div class="hobbies-icon">
                                                     <img
@@ -249,7 +248,7 @@
                                         </label>
 
                                         <label class="custom-radio">
-                                            <input type="radio" name="ring_shape" checked>
+                                            <input type="radio" name="ring_shape" >
                                             <span class="radio-btn"><i class="las la-check"></i>
                                                 <div class="hobbies-icon">
                                                     <img
@@ -339,24 +338,53 @@
                                         </label>
                                     </div>
                                 </div>
-
-
                             </div>
-                            <div class="step">
-                                <h4>THE PERFECT SETTING STYLE</h4>
-                                <hr>
-                                <div class="cc-selector">
-                                    <input id="solitaire" type="radio" name="ring_style" value="solitaire" />
-                                    <label class="drinkcard-cc solitaire" for="solitaire">solitaire</label>
-
-                                    <input id="diamond-head" type="radio" name="ring_style" value="diamond-head" />
-                                    <label class="drinkcard-cc diamond-head" for="diamond-head">Diamond Head</label>
-
-                                    <input id="side-stone" type="radio" name="ring_style" value="side-stone" />
-                                    <label class="drinkcard-cc side-stone" for="side-stone">Side stone</label>
-
-                                    <input id="advice" type="radio" name="ring_style" value="advice" />
-                                    <label class="drinkcard-cc advice" for="advice">Need Advice</label>
+                            <div class="step">                               
+                                <div class="main-container">     
+                                    <h4>THE PERFECT SETTING STYLE</h4>
+                                    <hr>                             
+                                    <div class="radio-buttons">
+                                        <label class="custom-radio">
+                                            <input type="radio" name="ring_style" >
+                                            <span class="radio-btn"><i class="las la-check"></i>
+                                                <div class="hobbies-icon">
+                                                    <img
+                                                        src="https://shinyrockpolished.com/wp-content/themes/Avada-Child-Theme/img/stone_16.png">
+                                                </div>
+                                            </span>
+                                            <p class="f-12label">solitaire</p>
+                                        </label>
+                                        <label class="custom-radio">
+                                            <input type="radio" name="ring_style" >
+                                            <span class="radio-btn"><i class="las la-check"></i>
+                                                <div class="hobbies-icon">
+                                                    <img
+                                                        src="https://shinyrockpolished.com/wp-content/themes/Avada-Child-Theme/img/stone_17.png">
+                                                </div>
+                                            </span>
+                                            <p class="f-12label">Diamond Head</p>
+                                        </label>
+                                        <label class="custom-radio">
+                                            <input type="radio" name="ring_style" >
+                                            <span class="radio-btn"><i class="las la-check"></i>
+                                                <div class="hobbies-icon">
+                                                    <img
+                                                        src="https://shinyrockpolished.com/wp-content/themes/Avada-Child-Theme/img/stone_18.png">
+                                                </div>
+                                            </span>
+                                            <p class="f-12label">Side stone</p>
+                                        </label>
+                                        <label class="custom-radio">
+                                            <input type="radio" name="ring_style">
+                                            <span class="radio-btn"><i class="las la-check"></i>
+                                                <div class="hobbies-icon">
+                                                    <img
+                                                        src="https://shinyrockpolished.com/wp-content/themes/Avada-Child-Theme/img/stone_15.png">
+                                                </div>
+                                            </span>
+                                            <p class="f-12label">Need Advice</p>
+                                        </label>                                        
+                                    </div>
                                 </div>
                             </div>
                             <div class="step">
