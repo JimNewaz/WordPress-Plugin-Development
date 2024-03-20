@@ -387,24 +387,63 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="step">
-                                <h4>DO YOU PREFER ROSE GOLD, YELLOW GOLD, WHITE GOLD OR PLATINUM?</h4>
-                                <div class="cc-selector">
-                                    <input id="rose-gold" type="radio" name="ring_color" value="solitaire" />
-                                    <label class="drinkcard-cc rose-gold" for="rose-gold">solitaire</label>
-
-                                    <input id="yellow-gold" type="radio" name="ring_color" value="yellow-gold" />
-                                    <label class="drinkcard-cc yellow-gold" for="yellow-gold">Diamond Head</label>
-
-                                    <input id="white-gold" type="radio" name="ring_color" value="white-gold" />
-                                    <label class="drinkcard-cc white-gold" for="white-gold">Side stone</label>
-
-                                    <input id="platinum" type="radio" name="ring_color" value="platinum" />
-                                    <label class="drinkcard-cc platinum" for="platinum">platinum</label>
-
-                                    <input id="advice" type="radio" name="ring_color" value="advice" />
-                                    <label class="drinkcard-cc advice" for="advice">Need Advice</label>
-                                </div>
+                            <div class="step">                               
+                                <div class="main-container">     
+                                    <h4>DO YOU PREFER ROSE GOLD, YELLOW GOLD, WHITE GOLD OR PLATINUM?</h4>
+                                    <hr>                             
+                                    <div class="radio-buttons">
+                                        <label class="custom-radio">
+                                            <input type="radio" name="ring_color" >
+                                            <span class="radio-btn"><i class="las la-check"></i>
+                                                <div class="hobbies-icon">
+                                                    <img
+                                                        src="https://shinyrockpolished.com/wp-content/themes/Avada-Child-Theme/img/stone_20.png">
+                                                </div>
+                                            </span>
+                                            <p class="f-12label">Gold</p>
+                                        </label>
+                                        <label class="custom-radio">
+                                            <input type="radio" name="ring_color" >
+                                            <span class="radio-btn"><i class="las la-check"></i>
+                                                <div class="hobbies-icon">
+                                                    <img
+                                                        src="https://shinyrockpolished.com/wp-content/themes/Avada-Child-Theme/img/stone_21.png">
+                                                </div>
+                                            </span>
+                                            <p class="f-12label">Yellow Gold</p>
+                                        </label>
+                                        <label class="custom-radio">
+                                            <input type="radio" name="ring_color" >
+                                            <span class="radio-btn"><i class="las la-check"></i>
+                                                <div class="hobbies-icon">
+                                                    <img
+                                                        src="https://shinyrockpolished.com/wp-content/themes/Avada-Child-Theme/img/stone_22.png">
+                                                </div>
+                                            </span>
+                                            <p class="f-12label">White Gold</p>
+                                        </label>
+                                        <label class="custom-radio">
+                                            <input type="radio" name="ring_color">
+                                            <span class="radio-btn"><i class="las la-check"></i>
+                                                <div class="hobbies-icon">
+                                                    <img
+                                                        src="https://shinyrockpolished.com/wp-content/themes/Avada-Child-Theme/img/white.png">
+                                                </div>
+                                            </span>
+                                            <p class="f-12label">Platinum</p>
+                                        </label>   
+                                        <label class="custom-radio">
+                                            <input type="radio" name="ring_color">
+                                            <span class="radio-btn"><i class="las la-check"></i>
+                                                <div class="hobbies-icon">
+                                                    <img
+                                                        src="https://shinyrockpolished.com/wp-content/themes/Avada-Child-Theme/img/stone_15.png">
+                                                </div>
+                                            </span>
+                                            <p class="f-12label">Need Advice</p>
+                                        </label>                                       
+                                    </div>
+                                </div>                                
                             </div>
                             <div class="step">
                                 <h4>WHAT IS YOUR DESIRED BUDGET FOR EUM ERROR MODI CORRU'S RING?</h4>
