@@ -100,7 +100,6 @@ submitBtn.addEventListener('click', () => {
 });
 
 
-
 jQuery(document).ready(function ($) {
     $('#enquiry_form').submit(function (event) {
 

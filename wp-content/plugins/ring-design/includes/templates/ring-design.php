@@ -10,6 +10,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="">
     <meta name="author" content="">
+    <link rel="stylesheet"
+        href="https://maxst.icons8.com/vue-static/landings/line-awesome/line-awesome/1.3.0/css/line-awesome.min.css" />
 </head>
 
 
@@ -21,8 +23,8 @@
             <div class="col-lg-4 offset-lg-1 mx-0 px-0">
                 <!-- TITLE -->
                 <div id="title-container">
-                    <img class="covid-image" src="../asstes/img/ring.png">
-                    
+                    <img class="covid-image" src="https://a0d.ae1.myftpupload.com/wp-content/uploads/2024/03/ring.png">
+
                     <h2>DESIGN YOUR RING</h2>
 
                     <p>Design the most beautiful engagement or cocktail ring! We use only the finest quality diamonds
@@ -35,7 +37,7 @@
             <div class="col-lg-7 mx-0 px-0">
                 <div class="progress">
                     <div aria-valuemax="100" aria-valuemin="0" aria-valuenow="50"
-                        class="progress-bar progress-bar-striped progress-bar-animated bg-danger" role="progressbar"
+                        class="progress-bar progress-bar-striped progress-bar-animated bg-form" role="progressbar"
                         style="width: 0%"></div>
                 </div>
                 <div id="qbox-container">
@@ -66,77 +68,279 @@
                             </div>
 
                             <div class="step">
-                                <h4>Select CENTRE STONE</h4>
-                                <div class="cc-selector">
-                                    <input id="diamond" type="radio" name="ring_stone" value="diamond" />
-                                    <label class="drinkcard-cc diamond" for="diamond"></label>
+                                <div class="main-container">
+                                    <h4>SELECT CENTRE STONE</h4>
+                                    <div class="radio-buttons">
+                                        <label class="custom-radio">
+                                            <input type="radio" name="ring_stone" checked>
+                                            <span class="radio-btn"><i class="las la-check"></i>
+                                                <div class="hobbies-icon">
+                                                    <img
+                                                        src="https://shinyrockpolished.com/wp-content/themes/Avada-Child-Theme/img/stone_1.png">
+                                                    
+                                                </div>
+                                            </span>
+                                            <p class="f-12label">Diamond</p>
+                                        </label>
+                                        <label class="custom-radio">
+                                            <input type="radio" name="ring_stone">
+                                            <span class="radio-btn"><i class="las la-check"></i>
+                                                <div class="hobbies-icon">
+                                                    <img
+                                                        src="https://shinyrockpolished.com/wp-content/themes/Avada-Child-Theme/img/stone_2.png">
+                                                    
+                                                </div>
+                                            </span>
+                                            <p class="f-12label">LAB GROWN DIAMOND</p>
+                                        </label>
+                                        <label class="custom-radio">
+                                            <input type="radio" name="ring_stone">
+                                            <span class="radio-btn"><i class="las la-check"></i>
+                                                <div class="hobbies-icon">
+                                                    <img
+                                                        src="https://shinyrockpolished.com/wp-content/themes/Avada-Child-Theme/img/Moissanite_icon.png">
+                                                    
+                                                </div>
+                                            </span>
+                                            <p class="f-12label">MOISSANITE</p>
+                                        </label>
+                                        <label class="custom-radio">
+                                            <input type="radio" name="ring_stone">
+                                            <span class="radio-btn"><i class="las la-check"></i>
+                                                <div class="hobbies-icon">
+                                                    <img
+                                                        src="https://shinyrockpolished.com/wp-content/themes/Avada-Child-Theme/img/Salt_Pepper_icon.png">
+                                                    
+                                                </div>
+                                            </span>
+                                            <p class="f-12label">SALT PEPPER Diamond</p>
+                                        </label>
 
-                                    <input id="labground-diamond" type="radio" name="ring_stone"
-                                        value="labground-diamond" />
-                                    <label class="drinkcard-cc labground-diamond" for="labground-diamond"></label>
-
-                                    <input id="moissanite" type="radio" name="ring_stone" value="moissanite" />
-                                    <label class="drinkcard-cc moissanite" for="moissanite"></label>
-
-                                    <input id="salt_diamond" type="radio" name="ring_stone" value="salt_diamond" />
-                                    <label class="drinkcard-cc salt_diamond" for="salt_diamond"></label>
-
-                                    <input id="sapphire" type="radio" name="ring_stone" value="sapphire" />
-                                    <label class="drinkcard-cc sapphire" for="sapphire"></label>
-
-                                    <input id="morganite" type="radio" name="ring_stone" value="morganite" />
-                                    <label class="drinkcard-cc morganite" for="morganite"></label>
-
-                                    <input id="tanzanite" type="radio" name="ring_stone" value="tanzanite" />
-                                    <label class="drinkcard-cc tanzanite" for="tanzanite"></label>
-
-                                    <input id="emerald" type="radio" name="ring_stone" value="emerald" />
-                                    <label class="drinkcard-cc emerald" for="emerald"></label>
-
-                                    <input id="ruby" type="radio" name="ring_stone" value="ruby" />
-                                    <label class="drinkcard-cc ruby" for="ruby"></label>
-
-                                    <input id="tourmaline" type="radio" name="ring_stone" value="tourmaline" />
-                                    <label class="drinkcard-cc tourmaline" for="tourmaline"></label>
+                                        <label class="custom-radio">
+                                            <input type="radio" name="ring_stone" checked>
+                                            <span class="radio-btn"><i class="las la-check"></i>
+                                                <div class="hobbies-icon">
+                                                    <img
+                                                        src="https://shinyrockpolished.com/wp-content/themes/Avada-Child-Theme/img/stone_3.png">
+                                                    
+                                                </div>
+                                            </span>
+                                            <p class="f-12label">SAPPHIRE</p>
+                                        </label>
+                                        <label class="custom-radio">
+                                            <input type="radio" name="ring_stone">
+                                            <span class="radio-btn"><i class="las la-check"></i>
+                                                <div class="hobbies-icon">
+                                                    <img
+                                                        src="https://shinyrockpolished.com/wp-content/themes/Avada-Child-Theme/img/stone_4.png">
+                                                    
+                                                </div>
+                                            </span>
+                                            <p class="f-12label">MORGANITE</p>
+                                        </label>
+                                        <label class="custom-radio">
+                                            <input type="radio" name="ring_stone">
+                                            <span class="radio-btn"><i class="las la-check"></i>
+                                                <div class="hobbies-icon">
+                                                    <img
+                                                        src="https://shinyrockpolished.com/wp-content/themes/Avada-Child-Theme/img/stone_5.png">
+                                                   
+                                                </div>
+                                            </span>
+                                            <p class="f-12label">TANZANITE</p>
+                                        </label>
+                                        <label class="custom-radio">
+                                            <input type="radio" name="ring_stone">
+                                            <span class="radio-btn"><i class="las la-check"></i>
+                                                <div class="hobbies-icon">
+                                                    <img
+                                                        src="https://shinyrockpolished.com/wp-content/themes/Avada-Child-Theme/img/stone_6.png">
+                                                    
+                                                </div>
+                                            </span>
+                                            <p class="f-12label">EMERALD</p>
+                                        </label>
+                                        <label class="custom-radio">
+                                            <input type="radio" name="ring_stone">
+                                            <span class="radio-btn"><i class="las la-check"></i>
+                                                <div class="hobbies-icon">
+                                                    <img
+                                                        src="https://shinyrockpolished.com/wp-content/themes/Avada-Child-Theme/img/stone_7.png">
+                                                    
+                                                </div>
+                                            </span>
+                                            <p class="f-12label">RUBY</p>
+                                        </label>
+                                        <label class="custom-radio">
+                                            <input type="radio" name="ring_stone">
+                                            <span class="radio-btn"><i class="las la-check"></i>
+                                                <div class="hobbies-icon">
+                                                    <img
+                                                        src="https://shinyrockpolished.com/wp-content/themes/Avada-Child-Theme/img/Tourmaline_icon.png">
+                                                    
+                                                </div>
+                                            </span>
+                                            <p class="f-12label">TOURMALINE</p>
+                                        </label>
+                                        <label class="custom-radio">
+                                            <input type="radio" name="ring_stone">
+                                            <span class="radio-btn"><i class="las la-check"></i>
+                                                <div class="hobbies-icon">
+                                                    <img
+                                                        src="https://shinyrockpolished.com/wp-content/themes/Avada-Child-Theme/img/stone_15.png">
+                                                
+                                                </div>
+                                            </span>
+                                            <p class="f-12label">Other</p>
+                                        </label>
+                                    </div>
                                 </div>
-
                             </div>
+
+
                             <div class="step">
                                 <h4>Select Ring Shape</h4>
-                                <div class="cc-selector">
-                                    <input id="round" type="radio" name="ring_shape" value="round" />
-                                    <label class="drinkcard-cc round_ring_shape" for="round">Round</label>
+                                <div class="main-container">
+                                    <h4>SELECT CENTRE STONE</h4>
+                                    <div class="radio-buttons">
+                                        <label class="custom-radio">
+                                            <input type="radio" name="ring_shape" checked>
+                                            <span class="radio-btn"><i class="las la-check"></i>
+                                                <div class="hobbies-icon">
+                                                    <img
+                                                        src="https://shinyrockpolished.com/wp-content/themes/Avada-Child-Theme/img/round_n.png">
 
-                                    <input id="emerald" type="radio" name="ring_shape" value="emerald" />
-                                    <label class="drinkcard-cc emerald_ring_shape" for="emerald">Emerald</label>
+                                                </div>
+                                            </span>
+                                            <p class="f-12label">Round</p>
+                                        </label>
+                                        <label class="custom-radio">
+                                            <input type="radio" name="ring_shape">
+                                            <span class="radio-btn"><i class="las la-check"></i>
+                                                <div class="hobbies-icon">
+                                                    <img
+                                                        src="https://shinyrockpolished.com/wp-content/themes/Avada-Child-Theme/img/emerald_n.png">
 
-                                    <input id="oval" type="radio" name="ring_shape" value="oval" />
-                                    <label class="drinkcard-cc oval_ring_shape" for="oval">Oval</label>
+                                                </div>
+                                            </span>
+                                            <p class="f-12label">Emerald</p>
+                                        </label>
+                                        <label class="custom-radio">
+                                            <input type="radio" name="ring_shape">
+                                            <span class="radio-btn"><i class="las la-check"></i>
+                                                <div class="hobbies-icon">
+                                                    <img
+                                                        src="https://shinyrockpolished.com/wp-content/themes/Avada-Child-Theme/img/oval_n.png">
 
-                                    <input id="square" type="radio" name="ring_shape" value="square" />
-                                    <label class="drinkcard-cc square_ring_shape" for="square">Square</label>
+                                                </div>
+                                            </span>
+                                            <p class="f-12label">Oval</p>
+                                        </label>
+                                        <label class="custom-radio">
+                                            <input type="radio" name="ring_shape">
+                                            <span class="radio-btn"><i class="las la-check"></i>
+                                                <div class="hobbies-icon">
+                                                    <img
+                                                        src="https://shinyrockpolished.com/wp-content/themes/Avada-Child-Theme/img/square_n.png">
 
-                                    <input id="cushion" type="radio" name="ring_shape" value="cushion" />
-                                    <label class="drinkcard-cc cushion_ring_shape" for="cushion">Cushion</label>
+                                                </div>
+                                            </span>
+                                            <p class="f-12label">Square</p>
+                                        </label>
 
-                                    <input id="baguette" type="radio" name="ring_shape" value="baguette" />
-                                    <label class="drinkcard-cc baguette_ring_shape" for="baguette">Baguette</label>
+                                        <label class="custom-radio">
+                                            <input type="radio" name="ring_shape" checked>
+                                            <span class="radio-btn"><i class="las la-check"></i>
+                                                <div class="hobbies-icon">
+                                                    <img
+                                                        src="https://shinyrockpolished.com/wp-content/themes/Avada-Child-Theme/img/cushion_n.png">
 
-                                    <input id="pear" type="radio" name="ring_shape" value="pear" />
-                                    <label class="drinkcard-cc pear_ring_shape" for="pear">Pear</label>
+                                                </div>
+                                            </span>
+                                            <p class="f-12label">Cushion</p>
+                                        </label>
+                                        <label class="custom-radio">
+                                            <input type="radio" name="ring_shape">
+                                            <span class="radio-btn"><i class="las la-check"></i>
+                                                <div class="hobbies-icon">
+                                                    <img
+                                                        src="https://shinyrockpolished.com/wp-content/themes/Avada-Child-Theme/img/bag_1.png">
 
-                                    <input id="radiant" type="radio" name="ring_shape" value="radiant" />
-                                    <label class="drinkcard-cc radiant_ring_shape" for="radiant">Radiant</label>
+                                                </div>
+                                            </span>
+                                            <p class="f-12label">Baguette</p>
+                                        </label>
+                                        <label class="custom-radio">
+                                            <input type="radio" name="ring_shape">
+                                            <span class="radio-btn"><i class="las la-check"></i>
+                                                <div class="hobbies-icon">
+                                                    <img
+                                                        src="https://shinyrockpolished.com/wp-content/themes/Avada-Child-Theme/img/pear_n.png">
+                                                    
+                                                </div>
+                                            </span>
+                                            <p class="f-12label">Pear</p>
+                                        </label>
+                                        <label class="custom-radio">
+                                            <input type="radio" name="ring_shape">
+                                            <span class="radio-btn"><i class="las la-check"></i>
+                                                <div class="hobbies-icon">
+                                                    <img
+                                                        src="https://shinyrockpolished.com/wp-content/themes/Avada-Child-Theme/img/radiant_n.png">
 
-                                    <input id="brilliant" type="radio" name="ring_shape" value="brilliant" />
-                                    <label class="drinkcard-cc brilliant_ring_shape" for="brilliant">Brilliant</label>
+                                                </div>
+                                            </span>
+                                            <p class="f-12label">Radiant</p>
+                                        </label>
+                                        <label class="custom-radio">
+                                            <input type="radio" name="ring_shape">
+                                            <span class="radio-btn"><i class="las la-check"></i>
+                                                <div class="hobbies-icon">
+                                                    <img
+                                                        src="https://shinyrockpolished.com/wp-content/themes/Avada-Child-Theme/img/Trilliant_Cut_icon_N.png">
 
-                                    <input id="marquise" type="radio" name="ring_shape" value="marquise" />
-                                    <label class="drinkcard-cc marquise_ring_shape" for="marquise">Marquise</label>
+                                                </div>
+                                            </span>
+                                            <p class="f-12label">Brilliant</p>
+                                        </label>
+                                        <label class="custom-radio">
+                                            <input type="radio" name="ring_shape">
+                                            <span class="radio-btn"><i class="las la-check"></i>
+                                                <div class="hobbies-icon">
+                                                    <img
+                                                        src="https://shinyrockpolished.com/wp-content/themes/Avada-Child-Theme/img/Marquise_Cut_icon_N.png">
 
-                                    <input id="heart" type="radio" name="ring_shape" value="heart" />
-                                    <label class="drinkcard-cc heart_ring_shape" for="heart">Heart</label>
+                                                </div>
+
+                                            </span>
+                                            <p class="f-12label">Marquise</p>
+                                        </label>
+                                        <label class="custom-radio">
+                                            <input type="radio" name="ring_shape">
+                                            <span class="radio-btn"><i class="las la-check"></i>
+                                                <div class="hobbies-icon">
+                                                    <img
+                                                        src="https://shinyrockpolished.com/wp-content/themes/Avada-Child-Theme/img/Heart_Cut_icon_N.png">
+
+                                                </div>
+                                            </span>
+                                            <p class="f-12label">Heart</p>
+                                        </label>
+                                        <label class="custom-radio">
+                                            <input type="radio" name="ring_shape">
+                                            <span class="radio-btn"><i class="las la-check"></i>
+                                                <div class="hobbies-icon">
+                                                    <img
+                                                        src="https://shinyrockpolished.com/wp-content/themes/Avada-Child-Theme/img/stone_15.png">
+
+                                                </div>
+                                            </span>
+                                            <p class="f-12label">Other</p>
+                                        </label>
+                                    </div>
                                 </div>
+
+
                             </div>
                             <div class="step">
                                 <h4>THE PERFECT SETTING STYLE</h4>
@@ -243,6 +447,7 @@
             </div>
         </div>
     </div>
+
 
 </body>
 
