@@ -187,7 +187,7 @@
                                             <span class="radio-btn"><i class="las la-check"></i>
                                                 <div class="hobbies-icon">
                                                     <img
-                                                        src="https://shinyrockpolished.com/wp-content/themes/Avada-Child-Theme/img/stone_15.png">
+                                                        src="https://a0d.ae1.myftpupload.com/wp-content/uploads/2024/03/others-removebg-preview.png">
                                                 
                                                 </div>
                                             </span>
@@ -330,7 +330,7 @@
                                             <span class="radio-btn"><i class="las la-check"></i>
                                                 <div class="hobbies-icon">
                                                     <img
-                                                        src="https://shinyrockpolished.com/wp-content/themes/Avada-Child-Theme/img/stone_15.png">
+                                                        src="https://a0d.ae1.myftpupload.com/wp-content/uploads/2024/03/others-removebg-preview.png">
 
                                                 </div>
                                             </span>
@@ -349,7 +349,7 @@
                                             <span class="radio-btn"><i class="las la-check"></i>
                                                 <div class="hobbies-icon">
                                                     <img
-                                                        src="https://shinyrockpolished.com/wp-content/themes/Avada-Child-Theme/img/stone_16.png">
+                                                        src="https://a0d.ae1.myftpupload.com/wp-content/uploads/2024/03/sq-removebg-preview.png">
                                                 </div>
                                             </span>
                                             <p class="f-12label">solitaire</p>
@@ -359,7 +359,7 @@
                                             <span class="radio-btn"><i class="las la-check"></i>
                                                 <div class="hobbies-icon">
                                                     <img
-                                                        src="https://shinyrockpolished.com/wp-content/themes/Avada-Child-Theme/img/stone_17.png">
+                                                        src="https://a0d.ae1.myftpupload.com/wp-content/uploads/2024/03/diamond-head-removebg-preview.png">
                                                 </div>
                                             </span>
                                             <p class="f-12label">Diamond Head</p>
@@ -369,7 +369,7 @@
                                             <span class="radio-btn"><i class="las la-check"></i>
                                                 <div class="hobbies-icon">
                                                     <img
-                                                        src="https://shinyrockpolished.com/wp-content/themes/Avada-Child-Theme/img/stone_18.png">
+                                                        src="https://a0d.ae1.myftpupload.com/wp-content/uploads/2024/03/diamond_head-removebg-preview.png">
                                                 </div>
                                             </span>
                                             <p class="f-12label">Side stone</p>
@@ -379,7 +379,7 @@
                                             <span class="radio-btn"><i class="las la-check"></i>
                                                 <div class="hobbies-icon">
                                                     <img
-                                                        src="https://shinyrockpolished.com/wp-content/themes/Avada-Child-Theme/img/stone_15.png">
+                                                        src="https://a0d.ae1.myftpupload.com/wp-content/uploads/2024/03/others-removebg-preview.png">
                                                 </div>
                                             </span>
                                             <p class="f-12label">Need Advice</p>
@@ -407,7 +407,7 @@
                                             <span class="radio-btn"><i class="las la-check"></i>
                                                 <div class="hobbies-icon">
                                                     <img
-                                                        src="https://shinyrockpolished.com/wp-content/themes/Avada-Child-Theme/img/stone_21.png">
+                                                        src="https://a0d.ae1.myftpupload.com/wp-content/uploads/2024/03/yellow.png">
                                                 </div>
                                             </span>
                                             <p class="f-12label">Yellow Gold</p>
@@ -417,7 +417,7 @@
                                             <span class="radio-btn"><i class="las la-check"></i>
                                                 <div class="hobbies-icon">
                                                     <img
-                                                        src="https://shinyrockpolished.com/wp-content/themes/Avada-Child-Theme/img/stone_22.png">
+                                                        src="https://a0d.ae1.myftpupload.com/wp-content/uploads/2024/03/platinum.png">
                                                 </div>
                                             </span>
                                             <p class="f-12label">White Gold</p>
@@ -427,7 +427,7 @@
                                             <span class="radio-btn"><i class="las la-check"></i>
                                                 <div class="hobbies-icon">
                                                     <img
-                                                        src="https://shinyrockpolished.com/wp-content/themes/Avada-Child-Theme/img/white.png">
+                                                        src="https://a0d.ae1.myftpupload.com/wp-content/uploads/2024/03/white.webp">
                                                 </div>
                                             </span>
                                             <p class="f-12label">Platinum</p>
@@ -437,7 +437,7 @@
                                             <span class="radio-btn"><i class="las la-check"></i>
                                                 <div class="hobbies-icon">
                                                     <img
-                                                        src="https://shinyrockpolished.com/wp-content/themes/Avada-Child-Theme/img/stone_15.png">
+                                                        src="https://a0d.ae1.myftpupload.com/wp-content/uploads/2024/03/others-removebg-preview.png">
                                                 </div>
                                             </span>
                                             <p class="f-12label">Need Advice</p>
