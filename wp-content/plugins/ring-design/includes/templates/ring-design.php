@@ -86,7 +86,7 @@
                                     <h4>SELECT CENTRE STONE</h4>
                                     <div class="radio-buttons">
                                         <label class="custom-radio">
-                                            <input type="radio" name="ring_stone" value="DIAMOND" required>
+                                            <input type="radio" name="ring_stone" value="DIAMOND" checked>
                                             <span class="radio-btn"><i class="las la-check"></i>
                                                 <div class="hobbies-icon">
                                                     <img
@@ -217,7 +217,7 @@
                                     <h4>SELECT RING SHAPE</h4>
                                     <div class="radio-buttons">
                                         <label class="custom-radio">
-                                            <input type="radio" name="ring_shape" value="Round" required>
+                                            <input type="radio" name="ring_shape" value="Round" checked>
                                             <span class="radio-btn"><i class="las la-check"></i>
                                                 <div class="hobbies-icon">
                                                     <img
@@ -361,7 +361,7 @@
                                     <hr>
                                     <div class="radio-buttons">
                                         <label class="custom-radio">
-                                            <input type="radio" name="ring_style" value="solitaire" required>
+                                            <input type="radio" name="ring_style" value="solitaire" checked>
                                             <span class="radio-btn"><i class="las la-check"></i>
                                                 <div class="hobbies-icon">
                                                     <img
@@ -412,7 +412,7 @@
                                     <hr>
                                     <div class="radio-buttons">
                                         <label class="custom-radio">
-                                            <input type="radio" name="ring_color" value="Gold" required>
+                                            <input type="radio" name="ring_color" value="Gold" checked>
                                             <span class="radio-btn"><i class="las la-check"></i>
                                                 <div class="hobbies-icon">
                                                     <img

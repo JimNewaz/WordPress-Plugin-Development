@@ -181,7 +181,7 @@ function handle_enquiry($data)
                                             </div>
                                         </div>
                                         <br>
-                                        <h3 class = "text-center">Thank You! <br> We will contact you soon</h3>
+                                        <h3 class = "text-center">Thank You! <br> We will contact you soon.</h3>
                                     </div>
                                 </div>
                             ', 200);

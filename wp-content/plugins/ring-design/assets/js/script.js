@@ -23,7 +23,54 @@ const progress = (value) => {
     document.getElementsByClassName('progress-bar')[0].style.width = `${value}%`;
 }
 
+// nextBtn.addEventListener('click', () => {
+//     current_step++;
+//     let previous_step = current_step - 1;
+//     if ((current_step > 0) && (current_step <= stepCount)) {
+//         prevBtn.classList.remove('d-none');
+//         prevBtn.classList.add('d-inline-block');
+//         step[current_step].classList.remove('d-none');
+//         step[current_step].classList.add('d-block');
+//         step[previous_step].classList.remove('d-block');
+//         step[previous_step].classList.add('d-none');
+//         if (current_step == stepCount) {
+//             submitBtn.classList.remove('d-none');
+//             submitBtn.classList.add('d-inline-block');
+//             nextBtn.classList.remove('d-inline-block');
+//             nextBtn.classList.add('d-none');
+//         }
+//     } else {
+//         if (current_step > stepCount) {
+//             form.onsubmit = () => {
+//                 return true
+//             }
+//         }
+//     }
+//     progress((100 / stepCount) * current_step);
+// });
+
 nextBtn.addEventListener('click', () => {
+    // Check if all required fields are filled
+    const requiredFields = document.querySelectorAll('[required]');
+    let allFieldsFilled = true;
+    requiredFields.forEach(field => {
+        if (field.value.trim() === '') {
+            allFieldsFilled = false;
+            // Optionally, you can add visual indication for missing required fields
+            field.classList.add('is-invalid');
+        } else {
+            // Remove any previous indication that the field was missing
+            field.classList.remove('is-invalid');
+        }
+    });
+
+    if (!allFieldsFilled) {
+        // Display an alert or any other indication that required fields are missing
+        alert('Please fill in all required fields.');
+        return; // Prevent proceeding to the next step
+    }
+
+    // Proceed to the next step if all required fields are filled
     current_step++;
     let previous_step = current_step - 1;
     if ((current_step > 0) && (current_step <= stepCount)) {
@@ -42,12 +89,13 @@ nextBtn.addEventListener('click', () => {
     } else {
         if (current_step > stepCount) {
             form.onsubmit = () => {
-                return true
-            }
+                return true;
+            };
         }
     }
     progress((100 / stepCount) * current_step);
 });
+
 
 
 prevBtn.addEventListener('click', () => {
