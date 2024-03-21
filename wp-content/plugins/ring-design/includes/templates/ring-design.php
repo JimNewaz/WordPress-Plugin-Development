@@ -37,25 +37,24 @@
             <div class="col-lg-7 mx-0 px-0">
                 <div class="progress">
                     <div aria-valuemax="100" aria-valuemin="0" aria-valuenow="50"
-                        class="progress-bar progress-bar-striped progress-bar-animated bg-form" role="progressbar"
-                        style="width: 0%"></div>
+                        class="progress-bar progress-bar-striped progress-bar-animated bg-form" role="progressbar" style="width: 0%">
+                    </div>
                 </div>
                 <div id="qbox-container">
                     <form class="needs-validation" id="form-wrapper" method="post" name="form-wrapper" novalidate="">
                         <?php wp_nonce_field('wp_rest');?>
+
                         <div id="steps-container">
-
                             <!-- Personal Information -->
-
                             <div class="step">
                                 <h4>Provide us with your personal information:</h4>
                                 <div class="mt-1">
                                     <label class="form-label">First Name:</label>
-                                    <input class="form-control" id="full_name" name="full_name" type="text">
+                                    <input class="form-control" id="full_name" name="first_name" type="text">
                                 </div>
                                 <div class="mt-2">
                                     <label class="form-label">Last Name:</label>
-                                    <input class="form-control" id="address" name="address" type="text">
+                                    <input class="form-control" id="last_name" name="last_name" type="text">
                                 </div>
                                 <div class="mt-2">
                                     <label class="form-label">Email:</label>
@@ -65,19 +64,24 @@
                                     <label class="form-label">Phone / Mobile Number:</label>
                                     <input class="form-control" id="phone" name="phone" type="text">
                                 </div>
+                                <div class="mt-2">
+                                    <label class="form-label">Address:</label>                                    
+                                    <textarea name="address" id="address" class="form-control" cols="30" rows="5"></textarea>
+                                </div>
                             </div>
 
+                            <!-- Rign Stone -->
                             <div class="step">
                                 <div class="main-container">
                                     <h4>SELECT CENTRE STONE</h4>
                                     <div class="radio-buttons">
                                         <label class="custom-radio">
-                                            <input type="radio" name="ring_stone" >
+                                            <input type="radio" name="ring_stone">
                                             <span class="radio-btn"><i class="las la-check"></i>
                                                 <div class="hobbies-icon">
                                                     <img
                                                         src="https://shinyrockpolished.com/wp-content/themes/Avada-Child-Theme/img/stone_1.png">
-                                                    
+
                                                 </div>
                                             </span>
                                             <p class="f-12label">Diamond</p>
@@ -88,7 +92,7 @@
                                                 <div class="hobbies-icon">
                                                     <img
                                                         src="https://shinyrockpolished.com/wp-content/themes/Avada-Child-Theme/img/stone_2.png">
-                                                    
+
                                                 </div>
                                             </span>
                                             <p class="f-12label">LAB GROWN DIAMOND</p>
@@ -99,7 +103,7 @@
                                                 <div class="hobbies-icon">
                                                     <img
                                                         src="https://shinyrockpolished.com/wp-content/themes/Avada-Child-Theme/img/Moissanite_icon.png">
-                                                    
+
                                                 </div>
                                             </span>
                                             <p class="f-12label">MOISSANITE</p>
@@ -110,19 +114,19 @@
                                                 <div class="hobbies-icon">
                                                     <img
                                                         src="https://shinyrockpolished.com/wp-content/themes/Avada-Child-Theme/img/Salt_Pepper_icon.png">
-                                                    
+
                                                 </div>
                                             </span>
                                             <p class="f-12label">SALT PEPPER Diamond</p>
                                         </label>
 
                                         <label class="custom-radio">
-                                            <input type="radio" name="ring_stone" >
+                                            <input type="radio" name="ring_stone">
                                             <span class="radio-btn"><i class="las la-check"></i>
                                                 <div class="hobbies-icon">
                                                     <img
                                                         src="https://shinyrockpolished.com/wp-content/themes/Avada-Child-Theme/img/stone_3.png">
-                                                    
+
                                                 </div>
                                             </span>
                                             <p class="f-12label">SAPPHIRE</p>
@@ -133,7 +137,7 @@
                                                 <div class="hobbies-icon">
                                                     <img
                                                         src="https://shinyrockpolished.com/wp-content/themes/Avada-Child-Theme/img/stone_4.png">
-                                                    
+
                                                 </div>
                                             </span>
                                             <p class="f-12label">MORGANITE</p>
@@ -144,7 +148,7 @@
                                                 <div class="hobbies-icon">
                                                     <img
                                                         src="https://shinyrockpolished.com/wp-content/themes/Avada-Child-Theme/img/stone_5.png">
-                                                    
+
                                                 </div>
                                             </span>
                                             <p class="f-12label">TANZANITE</p>
@@ -155,7 +159,7 @@
                                                 <div class="hobbies-icon">
                                                     <img
                                                         src="https://shinyrockpolished.com/wp-content/themes/Avada-Child-Theme/img/stone_6.png">
-                                                    
+
                                                 </div>
                                             </span>
                                             <p class="f-12label">EMERALD</p>
@@ -166,7 +170,7 @@
                                                 <div class="hobbies-icon">
                                                     <img
                                                         src="https://shinyrockpolished.com/wp-content/themes/Avada-Child-Theme/img/stone_7.png">
-                                                    
+
                                                 </div>
                                             </span>
                                             <p class="f-12label">RUBY</p>
@@ -177,7 +181,7 @@
                                                 <div class="hobbies-icon">
                                                     <img
                                                         src="https://shinyrockpolished.com/wp-content/themes/Avada-Child-Theme/img/Tourmaline_icon.png">
-                                                    
+
                                                 </div>
                                             </span>
                                             <p class="f-12label">TOURMALINE</p>
@@ -188,7 +192,7 @@
                                                 <div class="hobbies-icon">
                                                     <img
                                                         src="https://a0d.ae1.myftpupload.com/wp-content/uploads/2024/03/others-removebg-preview.png">
-                                                
+
                                                 </div>
                                             </span>
                                             <p class="f-12label">Other</p>
@@ -197,13 +201,13 @@
                                 </div>
                             </div>
 
-
-                            <div class="step">                                
-                                <div class="main-container">     
-                                    <h4>SELECT RING SHAPE</h4>                               
+                            <!-- Ring Shape -->
+                            <div class="step">
+                                <div class="main-container">
+                                    <h4>SELECT RING SHAPE</h4>
                                     <div class="radio-buttons">
                                         <label class="custom-radio">
-                                            <input type="radio" name="ring_shape" >
+                                            <input type="radio" name="ring_shape">
                                             <span class="radio-btn"><i class="las la-check"></i>
                                                 <div class="hobbies-icon">
                                                     <img
@@ -248,7 +252,7 @@
                                         </label>
 
                                         <label class="custom-radio">
-                                            <input type="radio" name="ring_shape" >
+                                            <input type="radio" name="ring_shape">
                                             <span class="radio-btn"><i class="las la-check"></i>
                                                 <div class="hobbies-icon">
                                                     <img
@@ -275,7 +279,7 @@
                                                 <div class="hobbies-icon">
                                                     <img
                                                         src="https://shinyrockpolished.com/wp-content/themes/Avada-Child-Theme/img/pear_n.png">
-                                                    
+
                                                 </div>
                                             </span>
                                             <p class="f-12label">Pear</p>
@@ -339,13 +343,15 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="step">                               
-                                <div class="main-container">     
+
+                            <!-- Ring Style -->
+                            <div class="step">
+                                <div class="main-container">
                                     <h4>THE PERFECT SETTING STYLE</h4>
-                                    <hr>                             
+                                    <hr>
                                     <div class="radio-buttons">
                                         <label class="custom-radio">
-                                            <input type="radio" name="ring_style" >
+                                            <input type="radio" name="ring_style">
                                             <span class="radio-btn"><i class="las la-check"></i>
                                                 <div class="hobbies-icon">
                                                     <img
@@ -355,7 +361,7 @@
                                             <p class="f-12label">solitaire</p>
                                         </label>
                                         <label class="custom-radio">
-                                            <input type="radio" name="ring_style" >
+                                            <input type="radio" name="ring_style">
                                             <span class="radio-btn"><i class="las la-check"></i>
                                                 <div class="hobbies-icon">
                                                     <img
@@ -365,7 +371,7 @@
                                             <p class="f-12label">Diamond Head</p>
                                         </label>
                                         <label class="custom-radio">
-                                            <input type="radio" name="ring_style" >
+                                            <input type="radio" name="ring_style">
                                             <span class="radio-btn"><i class="las la-check"></i>
                                                 <div class="hobbies-icon">
                                                     <img
@@ -383,17 +389,19 @@
                                                 </div>
                                             </span>
                                             <p class="f-12label">Need Advice</p>
-                                        </label>                                        
+                                        </label>
                                     </div>
                                 </div>
                             </div>
-                            <div class="step">                               
-                                <div class="main-container">     
+
+                            <!-- Colors -->
+                            <div class="step">
+                                <div class="main-container">
                                     <h4>DO YOU PREFER ROSE GOLD, YELLOW GOLD, WHITE GOLD OR PLATINUM?</h4>
-                                    <hr>                             
+                                    <hr>
                                     <div class="radio-buttons">
                                         <label class="custom-radio">
-                                            <input type="radio" name="ring_color" >
+                                            <input type="radio" name="ring_color">
                                             <span class="radio-btn"><i class="las la-check"></i>
                                                 <div class="hobbies-icon">
                                                     <img
@@ -403,7 +411,7 @@
                                             <p class="f-12label">Gold</p>
                                         </label>
                                         <label class="custom-radio">
-                                            <input type="radio" name="ring_color" >
+                                            <input type="radio" name="ring_color">
                                             <span class="radio-btn"><i class="las la-check"></i>
                                                 <div class="hobbies-icon">
                                                     <img
@@ -413,7 +421,7 @@
                                             <p class="f-12label">Yellow Gold</p>
                                         </label>
                                         <label class="custom-radio">
-                                            <input type="radio" name="ring_color" >
+                                            <input type="radio" name="ring_color">
                                             <span class="radio-btn"><i class="las la-check"></i>
                                                 <div class="hobbies-icon">
                                                     <img
@@ -431,7 +439,7 @@
                                                 </div>
                                             </span>
                                             <p class="f-12label">Platinum</p>
-                                        </label>   
+                                        </label>
                                         <label class="custom-radio">
                                             <input type="radio" name="ring_color">
                                             <span class="radio-btn"><i class="las la-check"></i>
@@ -441,10 +449,12 @@
                                                 </div>
                                             </span>
                                             <p class="f-12label">Need Advice</p>
-                                        </label>                                       
+                                        </label>
                                     </div>
-                                </div>                                
+                                </div>
                             </div>
+
+                            <!-- Currency and Budget -->
                             <div class="step">
                                 <h4>WHAT IS YOUR DESIRED BUDGET FOR EUM ERROR MODI CORRU'S RING?</h4>
                                 <div class="row">
@@ -475,6 +485,7 @@
                                 </div>
                             </div>
 
+                            <!-- Consultant -->
                             <div class="step">
                                 <div class="mt-1">
                                     <div class="closing-text">
@@ -484,7 +495,7 @@
                                             email of call you for a consultation?</p>
 
 
-                                        <select class="form-select" required="true" aria-required="true">
+                                        <select class="form-select" required="true" aria-required="true" name="consultant">
                                             <option value="active">Email</option>
                                             <option value="no access">Whatsapp Call</option>
                                             <option value="">Whatsapp Chat</option>
@@ -497,10 +508,11 @@
                                     </div>
                                 </div>
                             </div>
+
+                            <!-- Success -->
                             <div id="success">
                                 <div class="mt-5">
-
-
+                                    <div id="form-success"></div>
                                 </div>
                             </div>
                         </div>
@@ -518,9 +530,34 @@
 
 </body>
 
+<script>
+    // Rest API 
+    jQuery(document).ready(function ($) {
+        $('#form-wrapper').submit(function (event) {
+
+            event.preventDefault();
+            var form = $(this);
+            
+            $.ajax({
+                type: 'POST',
+                url: "<?php echo get_rest_url(null, 'v1/ring-design/submit'); ?>",
+                data: form.serialize(),
+                success: function (response) {
+                    form.hide();
+                    $('#form-success').html(response).fadeIn();
+                },
+                error: function () {
+                    $('#form-error').html('Sorry something is wr').fadeIn();
+                }
+            });
+
+        });
+    });
+</script>
+
 </html>
 
 
 <?php else: ?>
-This form is not active
+    This form is not active
 <?php endif; ?>

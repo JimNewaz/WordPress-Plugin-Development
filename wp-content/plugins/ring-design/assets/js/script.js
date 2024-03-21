@@ -78,46 +78,24 @@ prevBtn.addEventListener('click', () => {
 });
 
 
-submitBtn.addEventListener('click', () => {
-    preloader.classList.add('d-block');
+// submitBtn.addEventListener('click', () => {
+//     preloader.classList.add('d-block');
 
-    const timer = ms => new Promise(res => setTimeout(res, ms));
+//     const timer = ms => new Promise(res => setTimeout(res, ms));
 
-    timer(3000)
-        .then(() => {
-            bodyElement.classList.add('loaded');
-        }).then(() => {
-            step[stepCount].classList.remove('d-block');
-            step[stepCount].classList.add('d-none');
-            prevBtn.classList.remove('d-inline-block');
-            prevBtn.classList.add('d-none');
-            submitBtn.classList.remove('d-inline-block');
-            submitBtn.classList.add('d-none');
-            succcessDiv.classList.remove('d-none');
-            succcessDiv.classList.add('d-block');
-        })
+//     timer(3000)
+//         .then(() => {
+//             bodyElement.classList.add('loaded');
+//         }).then(() => {
+//             step[stepCount].classList.remove('d-block');
+//             step[stepCount].classList.add('d-none');
+//             prevBtn.classList.remove('d-inline-block');
+//             prevBtn.classList.add('d-none');
+//             submitBtn.classList.remove('d-inline-block');
+//             submitBtn.classList.add('d-none');
+//             succcessDiv.classList.remove('d-none');
+//             succcessDiv.classList.add('d-block');
+//         })
 
-});
+// });
 
-
-jQuery(document).ready(function ($) {
-    $('#enquiry_form').submit(function (event) {
-
-        event.preventDefault();
-        var form = $(this);
-
-        $.ajax({
-            type: 'POST',
-            url: "<?php echo get_rest_url(null, 'v1/ring-design/submit'); ?>",
-            data: form.serialize(),
-            success: function (response) {
-                form.hide();
-                $('#form-success').html(response).fadeIn();
-            },
-            error: function () {
-                $('#form-error').html('Sorry something is wr').fadeIn();
-            }
-        });
-
-    });
-});

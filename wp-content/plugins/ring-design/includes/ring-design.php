@@ -47,14 +47,16 @@ function create_rest_endpoint()
 
 function enqueue_scripts() {
     wp_enqueue_style('ring-design-plugin', MY_PLUGIN_URL . 'assets/css/ring-design-plugin.css');
-    wp_enqueue_script('jquery'); // Enqueue jQuery
+
+    // Enqueue jQuery
+    wp_enqueue_script('jquery'); 
+
     // Enqueue Bootstrap CSS
     wp_enqueue_style('bootstrap-css', 'https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css', array(), '5.3.0', 'all');
-
     wp_enqueue_style('google-fonts', 'https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,200;1,300;1,400;1,500;1,600&display=swap');
+    
     // Enqueue Bootstrap JavaScript
     wp_enqueue_script('bootstrap-bundle', 'https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js', array(), '5.0.2', true);
-
     wp_enqueue_script('ring-design-plugin', MY_PLUGIN_URL . 'assets/js/script.js', array('jquery'), null, true);
 }
 
@@ -88,10 +90,31 @@ function handle_enquiry($data)
 {
     $params = $data->get_params();
 
-    $field_fname = sanitize_text_field($params['fname']);
-    $field_lname = sanitize_text_field($params['lname']);
+    // Personal Information
+    $field_fname = sanitize_text_field($params['first_name']);
+    $field_lname = sanitize_text_field($params['last_name']);
     $field_email = sanitize_email($params['email']);
-    $field_phone = sanitize_text_field($params['phone']);
+    $filed_phone = sanitize_email($params['phone']);
+    $field_address = sanitize_textarea_field($params['address']);
+
+    // Ring Stone 
+    $filed_stone = $params['ring_stone'];
+
+    // Ring Shape 
+    $filed_shape = $params['ring_shape']; 
+
+    // Ring Style 
+    $filed_style = $params['ring_style'];
+
+    // Ring Color
+    $filed_color = $params['ring_colors'];
+
+    // Currency and Budget
+    $filed_currency = $params['currency'];
+    $filed_budget = $params['budget'];
+
+    // Consultant 
+    $filed_consultant = $params['consultant'];
 
     if (!wp_verify_nonce($params['_wpnonce'], 'wp_rest')) {
         return new WP_REST_Response('Sorry! Message Not Sent', 422);
