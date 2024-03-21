@@ -168,5 +168,23 @@ function handle_enquiry($data)
 
     wp_mail($reciepient_email, $subject, $message, $headers);
 
-    return new WP_REST_Response('Great! Message Sent Successfully', 200);
+
+    $response = new WP_REST_Response('
+                                <div class="mt-5">
+                                    <div id="form-success" class="text-center">
+                                        <div class="page-wrapper">
+                                            <div class="circle-wrapper">
+                                                <div class="success circle"></div>
+                                                <div class="icon">
+                                                <i class="fa fa-check"></i>
+                                                </div>                                                
+                                            </div>
+                                        </div>
+                                        <br>
+                                        <h3 class = "text-center">Thank You! <br> We will contact you soon</h3>
+                                    </div>
+                                </div>
+                            ', 200);
+
+    return $response;
 }

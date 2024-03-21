@@ -78,24 +78,24 @@ prevBtn.addEventListener('click', () => {
 });
 
 
-// submitBtn.addEventListener('click', () => {
-//     preloader.classList.add('d-block');
+submitBtn.addEventListener('click', () => {
+    // preloader.classList.add('d-block');
 
-//     const timer = ms => new Promise(res => setTimeout(res, ms));
+    const timer = ms => new Promise(res => setTimeout(res, ms));
 
-//     timer(3000)
-//         .then(() => {
-//             bodyElement.classList.add('loaded');
-//         }).then(() => {
-//             step[stepCount].classList.remove('d-block');
-//             step[stepCount].classList.add('d-none');
-//             prevBtn.classList.remove('d-inline-block');
-//             prevBtn.classList.add('d-none');
-//             submitBtn.classList.remove('d-inline-block');
-//             submitBtn.classList.add('d-none');
-//             succcessDiv.classList.remove('d-none');
-//             succcessDiv.classList.add('d-block');
-//         })
+    timer(100)
+        .then(() => {
+            bodyElement.classList.add('loaded');
+        }).then(() => {
+            step[stepCount].classList.remove('d-block');
+            step[stepCount].classList.add('d-none');
+            prevBtn.classList.remove('d-inline-block');
+            prevBtn.classList.add('d-none');
+            submitBtn.classList.remove('d-inline-block');
+            submitBtn.classList.add('d-none');
+            succcessDiv.classList.remove('d-none');
+            succcessDiv.classList.add('d-block');
+        })
 
-// });
+});
 

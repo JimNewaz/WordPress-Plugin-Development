@@ -10,8 +10,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="">
     <meta name="author" content="">
-    <link rel="stylesheet"
-        href="https://maxst.icons8.com/vue-static/landings/line-awesome/line-awesome/1.3.0/css/line-awesome.min.css" />
+    <link rel="stylesheet" href="https://maxst.icons8.com/vue-static/landings/line-awesome/line-awesome/1.3.0/css/line-awesome.min.css" />
+
+    <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
 </head>
 
 
@@ -510,10 +511,9 @@
                             </div>
 
                             <!-- Success -->
-                            <div id="success">
-                                <div class="mt-5">
-                                    <div id="form-success"></div>
-                                </div>
+                            <div id="success" class="w-100">
+                            </div>
+                            <div id="error" class="w-100">
                             </div>
                         </div>
                         <div id="q-box__buttons">
@@ -542,12 +542,11 @@
                 type: 'POST',
                 url: "<?php echo get_rest_url(null, 'v1/ring-design/submit'); ?>",
                 data: form.serialize(),
-                success: function (response) {
-                    form.hide();
-                    $('#form-success').html(response).fadeIn();
+                success: function (response) {                    
+                    $('#success').html(response).fadeIn();
                 },
                 error: function () {
-                    $('#form-error').html('Sorry something is wr').fadeIn();
+                    $('#error').html('Sorry something is wrong!').fadeIn();
                 }
             });
 
