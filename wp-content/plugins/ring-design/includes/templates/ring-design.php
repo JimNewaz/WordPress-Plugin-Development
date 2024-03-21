@@ -10,9 +10,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="">
     <meta name="author" content="">
-    <link rel="stylesheet" href="https://maxst.icons8.com/vue-static/landings/line-awesome/line-awesome/1.3.0/css/line-awesome.min.css" />
+    <link rel="stylesheet"
+        href="https://maxst.icons8.com/vue-static/landings/line-awesome/line-awesome/1.3.0/css/line-awesome.min.css" />
 
-    <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+    <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet"
+        integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fjalla+One&display=swap" rel="stylesheet">
 </head>
 
 
@@ -26,9 +32,10 @@
                 <div id="title-container">
                     <img class="covid-image" src="https://a0d.ae1.myftpupload.com/wp-content/uploads/2024/03/ring.png">
 
-                    <h2>DESIGN YOUR RING</h2>
+                    <h3>DESIGN YOUR RING</h3>
 
-                    <p>Design the most beautiful engagement or cocktail ring! We use only the finest quality diamonds
+                    <p class="text-center">Design the most beautiful engagement or cocktail ring! We use only the finest
+                        quality diamonds
                         and
                         gemstones to make the perfect ring just for you!</p>
                 </div>
@@ -38,7 +45,8 @@
             <div class="col-lg-7 mx-0 px-0">
                 <div class="progress">
                     <div aria-valuemax="100" aria-valuemin="0" aria-valuenow="50"
-                        class="progress-bar progress-bar-striped progress-bar-animated bg-form" role="progressbar" style="width: 0%">
+                        class="progress-bar progress-bar-striped progress-bar-animated bg-form" role="progressbar"
+                        style="width: 0%">
                     </div>
                 </div>
                 <div id="qbox-container">
@@ -51,23 +59,24 @@
                                 <h4>Provide us with your personal information:</h4>
                                 <div class="mt-1">
                                     <label class="form-label">First Name:</label>
-                                    <input class="form-control" id="full_name" name="first_name" type="text">
+                                    <input class="form-control" id="full_name" name="first_name" type="text" required>
                                 </div>
                                 <div class="mt-2">
                                     <label class="form-label">Last Name:</label>
-                                    <input class="form-control" id="last_name" name="last_name" type="text">
+                                    <input class="form-control" id="last_name" name="last_name" type="text" required>
                                 </div>
                                 <div class="mt-2">
                                     <label class="form-label">Email:</label>
-                                    <input class="form-control" id="email" name="email" type="email">
+                                    <input class="form-control" id="email" name="email" type="email" required>
                                 </div>
                                 <div class="mt-2">
                                     <label class="form-label">Phone / Mobile Number:</label>
-                                    <input class="form-control" id="phone" name="phone" type="text">
+                                    <input class="form-control" id="phone" name="phone" type="text" required>
                                 </div>
                                 <div class="mt-2">
-                                    <label class="form-label">Address:</label>                                    
-                                    <textarea name="address" id="address" class="form-control" cols="30" rows="5"></textarea>
+                                    <label class="form-label">Address:</label>
+                                    <textarea name="address" id="address" class="form-control" cols="30" rows="5"
+                                        required></textarea>
                                 </div>
                             </div>
 
@@ -77,7 +86,7 @@
                                     <h4>SELECT CENTRE STONE</h4>
                                     <div class="radio-buttons">
                                         <label class="custom-radio">
-                                            <input type="radio" name="ring_stone">
+                                            <input type="radio" name="ring_stone" value="DIAMOND" required>
                                             <span class="radio-btn"><i class="las la-check"></i>
                                                 <div class="hobbies-icon">
                                                     <img
@@ -88,7 +97,7 @@
                                             <p class="f-12label">Diamond</p>
                                         </label>
                                         <label class="custom-radio">
-                                            <input type="radio" name="ring_stone">
+                                            <input type="radio" name="ring_stone" value="LAB GROWN DIAMOND">
                                             <span class="radio-btn"><i class="las la-check"></i>
                                                 <div class="hobbies-icon">
                                                     <img
@@ -99,7 +108,7 @@
                                             <p class="f-12label">LAB GROWN DIAMOND</p>
                                         </label>
                                         <label class="custom-radio">
-                                            <input type="radio" name="ring_stone">
+                                            <input type="radio" name="ring_stone" value="MOISSANITE">
                                             <span class="radio-btn"><i class="las la-check"></i>
                                                 <div class="hobbies-icon">
                                                     <img
@@ -110,7 +119,7 @@
                                             <p class="f-12label">MOISSANITE</p>
                                         </label>
                                         <label class="custom-radio">
-                                            <input type="radio" name="ring_stone">
+                                            <input type="radio" name="ring_stone" value="SALT PEPPER DIAMOND">
                                             <span class="radio-btn"><i class="las la-check"></i>
                                                 <div class="hobbies-icon">
                                                     <img
@@ -122,7 +131,7 @@
                                         </label>
 
                                         <label class="custom-radio">
-                                            <input type="radio" name="ring_stone">
+                                            <input type="radio" name="ring_stone" value="SAPPHIRE">
                                             <span class="radio-btn"><i class="las la-check"></i>
                                                 <div class="hobbies-icon">
                                                     <img
@@ -133,7 +142,7 @@
                                             <p class="f-12label">SAPPHIRE</p>
                                         </label>
                                         <label class="custom-radio">
-                                            <input type="radio" name="ring_stone">
+                                            <input type="radio" name="ring_stone" value="MORGANITE">
                                             <span class="radio-btn"><i class="las la-check"></i>
                                                 <div class="hobbies-icon">
                                                     <img
@@ -144,7 +153,7 @@
                                             <p class="f-12label">MORGANITE</p>
                                         </label>
                                         <label class="custom-radio">
-                                            <input type="radio" name="ring_stone">
+                                            <input type="radio" name="ring_stone" value="TANZANITE">
                                             <span class="radio-btn"><i class="las la-check"></i>
                                                 <div class="hobbies-icon">
                                                     <img
@@ -155,7 +164,7 @@
                                             <p class="f-12label">TANZANITE</p>
                                         </label>
                                         <label class="custom-radio">
-                                            <input type="radio" name="ring_stone">
+                                            <input type="radio" name="ring_stone" value="EMERALD">
                                             <span class="radio-btn"><i class="las la-check"></i>
                                                 <div class="hobbies-icon">
                                                     <img
@@ -166,7 +175,7 @@
                                             <p class="f-12label">EMERALD</p>
                                         </label>
                                         <label class="custom-radio">
-                                            <input type="radio" name="ring_stone">
+                                            <input type="radio" name="ring_stone" value="RUBY">
                                             <span class="radio-btn"><i class="las la-check"></i>
                                                 <div class="hobbies-icon">
                                                     <img
@@ -177,7 +186,7 @@
                                             <p class="f-12label">RUBY</p>
                                         </label>
                                         <label class="custom-radio">
-                                            <input type="radio" name="ring_stone">
+                                            <input type="radio" name="ring_stone" value="TOURMALINE">
                                             <span class="radio-btn"><i class="las la-check"></i>
                                                 <div class="hobbies-icon">
                                                     <img
@@ -188,7 +197,7 @@
                                             <p class="f-12label">TOURMALINE</p>
                                         </label>
                                         <label class="custom-radio">
-                                            <input type="radio" name="ring_stone">
+                                            <input type="radio" name="ring_stone" value="Other">
                                             <span class="radio-btn"><i class="las la-check"></i>
                                                 <div class="hobbies-icon">
                                                     <img
@@ -208,7 +217,7 @@
                                     <h4>SELECT RING SHAPE</h4>
                                     <div class="radio-buttons">
                                         <label class="custom-radio">
-                                            <input type="radio" name="ring_shape">
+                                            <input type="radio" name="ring_shape" value="Round" required>
                                             <span class="radio-btn"><i class="las la-check"></i>
                                                 <div class="hobbies-icon">
                                                     <img
@@ -219,7 +228,7 @@
                                             <p class="f-12label">Round</p>
                                         </label>
                                         <label class="custom-radio">
-                                            <input type="radio" name="ring_shape">
+                                            <input type="radio" name="ring_shape" value="Emerald">
                                             <span class="radio-btn"><i class="las la-check"></i>
                                                 <div class="hobbies-icon">
                                                     <img
@@ -230,7 +239,7 @@
                                             <p class="f-12label">Emerald</p>
                                         </label>
                                         <label class="custom-radio">
-                                            <input type="radio" name="ring_shape">
+                                            <input type="radio" name="ring_shape" value="Oval">
                                             <span class="radio-btn"><i class="las la-check"></i>
                                                 <div class="hobbies-icon">
                                                     <img
@@ -241,7 +250,7 @@
                                             <p class="f-12label">Oval</p>
                                         </label>
                                         <label class="custom-radio">
-                                            <input type="radio" name="ring_shape">
+                                            <input type="radio" name="ring_shape" value="Square">
                                             <span class="radio-btn"><i class="las la-check"></i>
                                                 <div class="hobbies-icon">
                                                     <img
@@ -253,7 +262,7 @@
                                         </label>
 
                                         <label class="custom-radio">
-                                            <input type="radio" name="ring_shape">
+                                            <input type="radio" name="ring_shape" value="Cushion">
                                             <span class="radio-btn"><i class="las la-check"></i>
                                                 <div class="hobbies-icon">
                                                     <img
@@ -264,7 +273,7 @@
                                             <p class="f-12label">Cushion</p>
                                         </label>
                                         <label class="custom-radio">
-                                            <input type="radio" name="ring_shape">
+                                            <input type="radio" name="ring_shape" value="Baguette">
                                             <span class="radio-btn"><i class="las la-check"></i>
                                                 <div class="hobbies-icon">
                                                     <img
@@ -275,7 +284,7 @@
                                             <p class="f-12label">Baguette</p>
                                         </label>
                                         <label class="custom-radio">
-                                            <input type="radio" name="ring_shape">
+                                            <input type="radio" name="ring_shape" value="Pear">
                                             <span class="radio-btn"><i class="las la-check"></i>
                                                 <div class="hobbies-icon">
                                                     <img
@@ -286,7 +295,7 @@
                                             <p class="f-12label">Pear</p>
                                         </label>
                                         <label class="custom-radio">
-                                            <input type="radio" name="ring_shape">
+                                            <input type="radio" name="ring_shape" value="Radiant">
                                             <span class="radio-btn"><i class="las la-check"></i>
                                                 <div class="hobbies-icon">
                                                     <img
@@ -297,7 +306,7 @@
                                             <p class="f-12label">Radiant</p>
                                         </label>
                                         <label class="custom-radio">
-                                            <input type="radio" name="ring_shape">
+                                            <input type="radio" name="ring_shape" value="Birlliant">
                                             <span class="radio-btn"><i class="las la-check"></i>
                                                 <div class="hobbies-icon">
                                                     <img
@@ -308,7 +317,7 @@
                                             <p class="f-12label">Brilliant</p>
                                         </label>
                                         <label class="custom-radio">
-                                            <input type="radio" name="ring_shape">
+                                            <input type="radio" name="ring_shape" value="Marquise">
                                             <span class="radio-btn"><i class="las la-check"></i>
                                                 <div class="hobbies-icon">
                                                     <img
@@ -320,7 +329,7 @@
                                             <p class="f-12label">Marquise</p>
                                         </label>
                                         <label class="custom-radio">
-                                            <input type="radio" name="ring_shape">
+                                            <input type="radio" name="ring_shape" value="Heart">
                                             <span class="radio-btn"><i class="las la-check"></i>
                                                 <div class="hobbies-icon">
                                                     <img
@@ -331,7 +340,7 @@
                                             <p class="f-12label">Heart</p>
                                         </label>
                                         <label class="custom-radio">
-                                            <input type="radio" name="ring_shape">
+                                            <input type="radio" name="ring_shape" value="Other">
                                             <span class="radio-btn"><i class="las la-check"></i>
                                                 <div class="hobbies-icon">
                                                     <img
@@ -352,7 +361,7 @@
                                     <hr>
                                     <div class="radio-buttons">
                                         <label class="custom-radio">
-                                            <input type="radio" name="ring_style">
+                                            <input type="radio" name="ring_style" value="solitaire" required>
                                             <span class="radio-btn"><i class="las la-check"></i>
                                                 <div class="hobbies-icon">
                                                     <img
@@ -362,7 +371,7 @@
                                             <p class="f-12label">solitaire</p>
                                         </label>
                                         <label class="custom-radio">
-                                            <input type="radio" name="ring_style">
+                                            <input type="radio" name="ring_style" value="Diamond Head">
                                             <span class="radio-btn"><i class="las la-check"></i>
                                                 <div class="hobbies-icon">
                                                     <img
@@ -372,7 +381,7 @@
                                             <p class="f-12label">Diamond Head</p>
                                         </label>
                                         <label class="custom-radio">
-                                            <input type="radio" name="ring_style">
+                                            <input type="radio" name="ring_style" value="Side stone">
                                             <span class="radio-btn"><i class="las la-check"></i>
                                                 <div class="hobbies-icon">
                                                     <img
@@ -382,7 +391,7 @@
                                             <p class="f-12label">Side stone</p>
                                         </label>
                                         <label class="custom-radio">
-                                            <input type="radio" name="ring_style">
+                                            <input type="radio" name="ring_style" value="Need Advice">
                                             <span class="radio-btn"><i class="las la-check"></i>
                                                 <div class="hobbies-icon">
                                                     <img
@@ -395,6 +404,7 @@
                                 </div>
                             </div>
 
+
                             <!-- Colors -->
                             <div class="step">
                                 <div class="main-container">
@@ -402,17 +412,17 @@
                                     <hr>
                                     <div class="radio-buttons">
                                         <label class="custom-radio">
-                                            <input type="radio" name="ring_color">
+                                            <input type="radio" name="ring_color" value="Gold" required>
                                             <span class="radio-btn"><i class="las la-check"></i>
                                                 <div class="hobbies-icon">
                                                     <img
-                                                        src="https://shinyrockpolished.com/wp-content/themes/Avada-Child-Theme/img/stone_20.png">
+                                                        src="https://a0d.ae1.myftpupload.com/wp-content/uploads/2024/03/gold.png">
                                                 </div>
                                             </span>
                                             <p class="f-12label">Gold</p>
                                         </label>
                                         <label class="custom-radio">
-                                            <input type="radio" name="ring_color">
+                                            <input type="radio" name="ring_color" value="Yellow Gold">
                                             <span class="radio-btn"><i class="las la-check"></i>
                                                 <div class="hobbies-icon">
                                                     <img
@@ -422,7 +432,7 @@
                                             <p class="f-12label">Yellow Gold</p>
                                         </label>
                                         <label class="custom-radio">
-                                            <input type="radio" name="ring_color">
+                                            <input type="radio" name="ring_color" value="White Gold">
                                             <span class="radio-btn"><i class="las la-check"></i>
                                                 <div class="hobbies-icon">
                                                     <img
@@ -432,17 +442,17 @@
                                             <p class="f-12label">White Gold</p>
                                         </label>
                                         <label class="custom-radio">
-                                            <input type="radio" name="ring_color">
+                                            <input type="radio" name="ring_color" value="Platinum">
                                             <span class="radio-btn"><i class="las la-check"></i>
                                                 <div class="hobbies-icon">
                                                     <img
-                                                        src="https://a0d.ae1.myftpupload.com/wp-content/uploads/2024/03/white.webp">
+                                                        src="https://a0d.ae1.myftpupload.com/wp-content/uploads/2024/03/platinum.png">
                                                 </div>
                                             </span>
                                             <p class="f-12label">Platinum</p>
                                         </label>
                                         <label class="custom-radio">
-                                            <input type="radio" name="ring_color">
+                                            <input type="radio" name="ring_color" value="Need Advice">
                                             <span class="radio-btn"><i class="las la-check"></i>
                                                 <div class="hobbies-icon">
                                                     <img
@@ -458,32 +468,31 @@
                             <!-- Currency and Budget -->
                             <div class="step">
                                 <h4>WHAT IS YOUR DESIRED BUDGET FOR EUM ERROR MODI CORRU'S RING?</h4>
-                                <div class="row">
-                                    <label class="form-label">Currency</label>
-                                    <select class="form-select" required="true" aria-required="true" name="currency">
-                                        <option value="zar">ZAR</option>
-                                        <option value="usd">USD</option>
-                                        <option value="gbp">USD</option>
-                                        <option value="eur">EUR</option>
-                                        <option value="aud">AUD</option>
-                                    </select>
-                                </div>
-                                <div class="row">
-                                    <label class="form-label">Budget</label>
-                                    <select class="form-select" required="true" aria-required="true" name="budget">
-                                        <option value="500 - 1000">500 - 1000</option>
-                                        <option value="1000 - 2000">1000 - 2000</option>
-                                        <option value="2000 - 5000">2000 - 5000</option>
-                                        <option value="5000+">5000+</option>
-                                        <option value="5000 - 10,000">5000 - 10,000</option>
-                                        <option value="10,000 - 20,000">10,000 - 20,000</option>
-                                        <option value="30,000 - 50,000">30,000 - 50,000</option>
-                                        <option value="50,000 - 100,000">50,000 - 100,000</option>
-                                        <option value="100,000 - 200,000">100,000 - 200,000</option>
-                                        <option value="200,000+">200,000+</option>
-                                        <option value="advice">Need Advice</option>
-                                    </select>
-                                </div>
+
+                                <label class="form-label">Currency</label>
+                                <select class="form-select" required="true" aria-required="true" name="currency"
+                                    required>
+                                    <option value="zar">ZAR</option>
+                                    <option value="usd">USD</option>
+                                    <option value="gbp">USD</option>
+                                    <option value="eur">EUR</option>
+                                    <option value="aud">AUD</option>
+                                </select>
+                                <br>
+                                <label class="form-label">Budget</label>
+                                <select class="form-select" required="true" aria-required="true" name="budget" required>
+                                    <option value="500 - 1000">500 - 1000</option>
+                                    <option value="1000 - 2000">1000 - 2000</option>
+                                    <option value="2000 - 5000">2000 - 5000</option>
+                                    <option value="5000+">5000+</option>
+                                    <option value="5000 - 10,000">5000 - 10,000</option>
+                                    <option value="10,000 - 20,000">10,000 - 20,000</option>
+                                    <option value="30,000 - 50,000">30,000 - 50,000</option>
+                                    <option value="50,000 - 100,000">50,000 - 100,000</option>
+                                    <option value="100,000 - 200,000">100,000 - 200,000</option>
+                                    <option value="200,000+">200,000+</option>
+                                    <option value="advice">Need Advice</option>
+                                </select>
                             </div>
 
                             <!-- Consultant -->
@@ -492,16 +501,17 @@
                                     <div class="closing-text">
                                         <h4>DESIGNING THE PERFECT RING </h4>
                                         <p>Thank you! <br>
-                                            Before we get designing. Would like our designers to Video call, WhatsApp,
-                                            email of call you for a consultation?</p>
+                                            How would like our designers to Video call, WhatsApp,
+                                            email of call you for a consultation?
+                                        </p>
 
-
-                                        <select class="form-select" required="true" aria-required="true" name="consultant">
-                                            <option value="active">Email</option>
-                                            <option value="no access">Whatsapp Call</option>
-                                            <option value="">Whatsapp Chat</option>
-                                            <option value="">Phone Call</option>
-                                            <option value="">Video Call</option>
+                                        <select class="form-select" required="true" aria-required="true"
+                                            name="consultant" required>
+                                            <option value="Email">Email</option>
+                                            <option value="Whatsapp Call">Whatsapp Call</option>
+                                            <option value="Whatsapp Chat">Whatsapp Chat</option>
+                                            <option value="Phone Call">Phone Call</option>
+                                            <option value="Video Call">Video Call</option>
 
                                         </select>
                                         <br>
@@ -537,12 +547,12 @@
 
             event.preventDefault();
             var form = $(this);
-            
+
             $.ajax({
                 type: 'POST',
                 url: "<?php echo get_rest_url(null, 'v1/ring-design/submit'); ?>",
                 data: form.serialize(),
-                success: function (response) {                    
+                success: function (response) {
                     $('#success').html(response).fadeIn();
                 },
                 error: function () {
@@ -558,5 +568,5 @@
 
 
 <?php else: ?>
-    This form is not active
+This form is not active
 <?php endif; ?>

@@ -2,7 +2,7 @@
 
 body {
     background: #f7f9ff;
-    font-family: 'Josefin Sans', sans-serif;
+    font-family: "Fjalla One", sans-serif;
     font-size: 16px;
     font-size: 1rem;
     font-weight: 600;
@@ -49,15 +49,15 @@ label {
     -moz-box-shadow: 10px 8px 21px 0px rgba(204, 204, 204, 0.75);
 }
 
-#title-container h2 {
-    font-size: 45px;
+#title-container h3 {
+    font-size: 35px;
     font-weight: 800;
     color: #fff;
     padding: 0;
     margin-bottom: 0px;
 }
 
-#title-container h3 {
+#title-container h4 {
     font-size: 25px;
     font-weight: 600;
     color: #82000a;
@@ -93,7 +93,7 @@ label {
     margin: auto;
     width: 500px;
     min-height: 420px;
-    display: flex;
+    /* display: flex; */
     vertical-align: middle;
     align-items: center;
 }
@@ -291,6 +291,7 @@ input[type="radio"]:hover {
 
 #success {
     display: none;
+    margin-top:25%;
 }
 
 #success h4 {
@@ -575,36 +576,6 @@ input[type="radio"]:hover {
     background-image: url(https://shinyrockpolished.com/wp-content/themes/Avada-Child-Theme/img/white.png);
 }
 
-
-/* .cc-selector input:active+.drinkcard-cc { */
-/* opacity: .9; */
-/* } */
-
-/* .cc-selector input:checked+.drinkcard-cc { */
-/* filter: none; */
-/* } */
-
-/* .drinkcard-cc {
-    cursor: pointer;
-    background-size: contain;
-    background-repeat: no-repeat;
-    display: inline-block;
-    width: 100px;
-    height: 70px;
-    -webkit-transition: all 100ms ease-in;
-    -moz-transition: all 100ms ease-in;
-    transition: all 100ms ease-in;
-    -webkit-filter: none;
-    -moz-filter: none;
-    filter: none;
-} */
-
-/* .drinkcard-cc:hover {
-    -webkit-filter: brightness(1.0) grayscale(.5) opacity(.9);    
-    -moz-filter: brightness(1.2) grayscale(.5) opacity(.9);
-    filter: brightness(1.2) grayscale(.5) opacity(.9);    
-} */
-
 .drinkcard-cc {
     cursor: pointer;
     background-size: contain;
@@ -636,6 +607,7 @@ input[type="radio"]:hover {
 }
 
 @import url("https://fonts.googleapis.com/css?family=Raleway:300,400,400i,700");
+@import url("https://fonts.googleapis.com/css2?family=Fjalla+One&display=swap");
 
 * {
     margin: 0;
@@ -644,7 +616,7 @@ input[type="radio"]:hover {
 }
 
 body {
-    font-family: Raleway, sans-serif;
+    font-family: "Fjalla One", sans-serif;
 }
 
 .main-container {
