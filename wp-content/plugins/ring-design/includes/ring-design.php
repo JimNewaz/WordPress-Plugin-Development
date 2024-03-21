@@ -23,7 +23,7 @@ function display_submissions()
     echo '<ul>';
 
     foreach ($post_metas as $key => $value) {
-        echo '<li> <strong>' . ucfirst($key) . '</strong>: <br>' . esc_html($value[0]) . '</li>';
+        echo '<li> <strong>' . ucfirst($key) . '</strong>: <br> ' . esc_html($value[0]) . '</li> <hr>';
     }
 
     echo '</ul>';
