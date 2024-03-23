@@ -24,7 +24,7 @@
 
 <body>
     <!-- CONTAINER -->
-    <div class="container d-flex align-items-center min-vh-100">
+    <div class="container align-items-center min-vh-100">
         <div class="row g-0 justify-content-center">
             <!-- TITLE -->
             <div class="col-lg-4 offset-lg-1 mx-0 px-0">

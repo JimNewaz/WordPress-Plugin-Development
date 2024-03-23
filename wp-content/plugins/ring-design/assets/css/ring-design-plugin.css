@@ -91,7 +91,7 @@ label {
 
 #steps-container {
     margin: auto;
-    width: 500px;
+    /* width: 500px; */
     min-height: 420px;
     /* display: flex; */
     vertical-align: middle;
