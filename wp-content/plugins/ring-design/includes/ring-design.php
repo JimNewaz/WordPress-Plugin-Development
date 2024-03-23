@@ -182,9 +182,10 @@ function handle_enquiry($data)
     $headers[] = "Content-Type: text/html";
 
     $message = '';
-    $message = "<h1> New Customize Ring :" . $field_fname . "</h1>";
+    $message = "<h1> New Ring Enquiry From:" . $field_fname . "</h1>";
+    $message .= "A new ring enquiry has been submitted on GoldJewelleryIsland:";
 
-    $subject = 'New enquiery from:' . $field_fname;
+    $subject = 'New Ring Enquiry From:' . $field_fname;
 
     $postarr = [
         'post_title' => $field_fname,
@@ -213,8 +214,15 @@ function handle_enquiry($data)
 
     wp_mail($reciepient_email, $subject, $message, $headers);
 
-    // Send Mail to the Form Sumitter 
 
+    // Send email to form submitter
+    $submitter_subject  = 'Thank you for your enquiry';
+    $submitter_message  = 'Dear ' . $field_fname . ',<br><br>';
+    $submitter_message .= 'Thank you for submitting your ring design. <br> We have received your enquiry and will get back to you soon with further details.<br><br>';
+    $submitter_message .= 'Best regards,<br>';
+    $submitter_message .= 'Gold Jewellery Island';
+
+    wp_mail($field_email, $submitter_subject, $submitter_message, $headers);
 
     $response = new WP_REST_Response('
                                 <div class="mt-5">
