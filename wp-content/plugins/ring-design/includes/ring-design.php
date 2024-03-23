@@ -23,7 +23,47 @@ function display_submissions()
     echo '<ul>';
 
     foreach ($post_metas as $key => $value) {
-        echo '<li> <strong>' . ucfirst($key) . '</strong>: <br> ' . esc_html($value[0]) . '</li> <hr>';
+        echo '<li> <strong>' . ucfirst($key) . '</strong>: <br> ' . esc_html($value[0]) . '</li>';
+
+        switch (esc_html($value[0])) {
+            case 'DIAMOND':
+                echo "<img src='https://goldjewelleryisland.com/wp-content/uploads/2024/03/diamond.webp'></img>";
+                break;
+            case 'LAB GROWN DIAMOND':
+                echo "<img src='https://goldjewelleryisland.com/wp-content/uploads/2024/03/grown-diamond.webp'></img>";
+                break;
+            case 'MOISSANITE':
+                echo "<img src='https://goldjewelleryisland.com/wp-content/uploads/2024/03/moissianite.webp'></img>";
+                break;
+            case 'SALT PEPPER Diamond':
+                echo "<img src='https://goldjewelleryisland.com/wp-content/uploads/2024/03/salt-diamond.webp'></img>";
+                break;
+            case 'SAPPHIRE':
+                echo "<img src='https://goldjewelleryisland.com/wp-content/uploads/2024/03/sapphire.webp'></img>";
+                break;
+            case 'MORGANITE':
+                echo "<img src='https://goldjewelleryisland.com/wp-content/uploads/2024/03/morganite.webp'></img>";
+                break;
+            case 'TANZANITE':
+                echo "<img src='https://goldjewelleryisland.com/wp-content/uploads/2024/03/tanzanite.webp'></img>";
+                break;
+            case 'EMERALD':
+                echo "<img src='https://goldjewelleryisland.com/wp-content/uploads/2024/03/emerald.webp'></img>";
+                break;
+            case 'RUBY':
+                echo "<img src='https://goldjewelleryisland.com/wp-content/uploads/2024/03/ruby.webp'></img>";
+                break;
+            case 'TOURMALIN':
+                echo "<img src='https://goldjewelleryisland.com/wp-content/uploads/2024/03/tourmaline.webp'></img>";
+                break;
+            case 'Other':
+                echo "<img src='https://goldjewelleryisland.com/wp-content/uploads/2024/03/others-removebg-preview.png'></img>";
+                break;
+            default:
+                // Handle default case if necessary
+                break;
+        }
+        echo '<hr>';
     }
 
     echo '</ul>';
@@ -45,16 +85,17 @@ function create_rest_endpoint()
     ));
 }
 
-function enqueue_scripts() {
+function enqueue_scripts()
+{
     wp_enqueue_style('ring-design-plugin', MY_PLUGIN_URL . 'assets/css/ring-design-plugin.css');
 
     // Enqueue jQuery
-    wp_enqueue_script('jquery'); 
+    wp_enqueue_script('jquery');
 
     // Enqueue Bootstrap CSS
     wp_enqueue_style('bootstrap-css', 'https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css', array(), '5.3.0', 'all');
     wp_enqueue_style('google-fonts', 'https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,200;1,300;1,400;1,500;1,600&display=swap');
-    
+
     // Enqueue Bootstrap JavaScript
     wp_enqueue_script('bootstrap-bundle', 'https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js', array(), '5.0.2', true);
     wp_enqueue_script('ring-design-plugin', MY_PLUGIN_URL . 'assets/js/script.js', array('jquery'), null, true);
@@ -70,7 +111,7 @@ function create_submissions_page()
             'singular_name' => 'Ring Submission',
             'edit_item' => 'View Submission'
         ],
-        'publicly_queryable' => false,        
+        'publicly_queryable' => false,
         'supports' => false,
         'capability_type' => 'post',
         'capabilities' => array(
@@ -98,7 +139,7 @@ function handle_enquiry($data)
     $filed_stone = $params['ring_stone'];
 
     // Ring Shape 
-    $filed_shape = $params['ring_shape']; 
+    $filed_shape = $params['ring_shape'];
 
     // Ring Style 
     $filed_style = $params['ring_style'];
@@ -193,8 +234,10 @@ function handle_enquiry($data)
 // Add custom post type for stones
 add_action('init', 'create_stone_post_type');
 
-function create_stone_post_type() {
-    register_post_type('stone',
+function create_stone_post_type()
+{
+    register_post_type(
+        'stone',
         array(
             'labels' => array(
                 'name' => __('Stones'),
@@ -203,8 +246,8 @@ function create_stone_post_type() {
             ),
             'public' => true,
             'has_archive' => true,
-            'publicly_queryable' => false,      
-            'menu_icon' => 'dashicons-superhero-alt', 
+            'publicly_queryable' => false,
+            'menu_icon' => 'dashicons-superhero-alt',
             'supports' => false,
         )
     );
@@ -212,13 +255,15 @@ function create_stone_post_type() {
 
 // Add meta boxes for custom fields
 add_action('add_meta_boxes', 'add_stone_meta_boxes');
-function add_stone_meta_boxes() {
+function add_stone_meta_boxes()
+{
     add_meta_box('stone_text_field', __('Text Field'), 'render_stone_text_field', 'stone');
     add_meta_box('stone_image_field', __('Image Field'), 'render_stone_image_field', 'stone');
     add_meta_box('stone_description_field', __('Description Field'), 'render_stone_description_field', 'stone');
 }
 
-function render_stone_text_field($post) {
+function render_stone_text_field($post)
+{
 
     wp_nonce_field('stone_meta_box', 'stone_meta_box_nonce');
 
@@ -227,50 +272,52 @@ function render_stone_text_field($post) {
 }
 
 
-function render_stone_image_field($post) {
+function render_stone_image_field($post)
+{
     // Output the nonce field
     wp_nonce_field('stone_meta_box', 'stone_meta_box_nonce');
-    
+
     $image_id = get_post_meta($post->ID, 'stone_image_field', true);
     $image_url = wp_get_attachment_image_url($image_id, 'thumbnail');
-    ?>
+?>
     <div class="stone-image-preview">
-        <?php if ($image_url): ?>
+        <?php if ($image_url) : ?>
             <img src="<?php echo esc_url($image_url); ?>" style="max-width: 200px; max-height: 200px;" />
-        <?php else: ?>
+        <?php else : ?>
             <p>No image selected</p>
         <?php endif; ?>
     </div>
     <input type="hidden" name="stone_image_field" id="stone_image_field_image" value="<?php echo ($image_id); ?>" />
-    
+
     <button type="button" id="choose_image_button" class="button">Choose Image</button>
 
     <script>
-    jQuery(document).ready(function($) {
-        $('#choose_image_button').click(function(e) {
-            e.preventDefault();
-            var custom_uploader = wp.media({
-                type:'image',
-                title: 'Choose Image',
-                button: {
-                    text: 'Choose Image'
-                },
-                multiple: false
-            })
-            .on('select', function() {
-                var attachment = custom_uploader.state().get('selection').first().toJSON();                
-                
-                $('#stone_image_field_image').val(attachment.id);
-                $('.stone-image-preview').html('<img src="' + attachment.sizes.thumbnail.url + '" style="max-width: 200px; max-height: 200px;" />');
-            })
-            .open();
+        jQuery(document).ready(function($) {
+            $('#choose_image_button').click(function(e) {
+                e.preventDefault();
+                var custom_uploader = wp.media({
+                        type: 'image',
+                        title: 'Choose Image',
+                        button: {
+                            text: 'Choose Image'
+                        },
+                        multiple: false
+                    })
+                    .on('select', function() {
+                        var attachment = custom_uploader.state().get('selection').first().toJSON();
+
+                        $('#stone_image_field_image').val(attachment.id);
+                        $('.stone-image-preview').html('<img src="' + attachment.sizes.thumbnail.url + '" style="max-width: 200px; max-height: 200px;" />');
+                    })
+                    .open();
+            });
         });
-    });
     </script>
-    <?php
+<?php
 }
 
-function render_stone_description_field($post) {
+function render_stone_description_field($post)
+{
     wp_nonce_field('stone_meta_box', 'stone_meta_box_nonce');
 
     $description = get_post_meta($post->ID, 'stone_description_field', true);
@@ -279,7 +326,8 @@ function render_stone_description_field($post) {
 
 // Save stone meta box data
 add_action('save_post', 'save_stone_meta_data');
-function save_stone_meta_data($post_id) {
+function save_stone_meta_data($post_id)
+{
     // Verify nonce
     if (!isset($_POST['stone_meta_box_nonce']) || !wp_verify_nonce($_POST['stone_meta_box_nonce'], 'stone_meta_box')) {
         return;
@@ -313,11 +361,11 @@ function save_stone_meta_data($post_id) {
 
 
 add_action('pre_get_posts', 'custom_modify_stones_query');
-function custom_modify_stones_query($query) {
+function custom_modify_stones_query($query)
+{
     // Check if on the stones list page and main query
     if (is_admin() && $query->is_main_query() && $query->get('post_type') === 'stone') {
         // Include both published and draft stones
         $query->set('post_status', array('publish', 'draft'));
     }
 }
-

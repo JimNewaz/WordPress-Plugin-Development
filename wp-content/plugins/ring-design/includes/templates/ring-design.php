@@ -190,7 +190,7 @@
                                             <span class="radio-btn"><i class="las la-check"></i>
                                                 <div class="hobbies-icon">
                                                     <img
-                                                        src="https://goldjewelleryisland.com/wp-content/uploads/2024/03/sapphire.webp">
+                                                        src="https://goldjewelleryisland.com/wp-content/uploads/2024/03/tourmaline.webp">
 
                                                 </div>
                                             </span>
@@ -456,7 +456,7 @@
                                             <span class="radio-btn"><i class="las la-check"></i>
                                                 <div class="hobbies-icon">
                                                     <img
-                                                        src="https://a0d.ae1.myftpupload.com/wp-content/uploads/2024/03/others-removebg-preview.png">
+                                                        src="https://goldjewelleryisland.com/wp-content/uploads/2024/03/others-removebg-preview.png">
                                                 </div>
                                             </span>
                                             <p class="f-12label">Need Advice</p>
