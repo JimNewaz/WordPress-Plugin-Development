@@ -15,141 +15,65 @@ function create_meta_box()
     add_meta_box('custom_ring_design_form', 'Submissions', 'display_submissions', 'submission');
 }
 
-function display_submissions()
-{
-    $post_metas = get_post_meta(get_the_ID());
+function display_submissions() {
+    $post_id = get_the_ID();
+    $post_metas = get_post_meta($post_id);
 
     unset($post_metas['_edit_lock']);
-    echo '<ul>';
+    // Map values to image URLs
+    $image_urls = [
+        'DIAMOND' => 'diamond.webp',
+        'LAB GROWN DIAMOND' => 'grown-diamond.webp',
+        'MOISSANITE' => 'moissianite.webp',
+        'SALT PEPPER Diamond' => 'salt-diamond.webp',
+        'SAPPHIRE' => 'sapphire.webp',
+        'MORGANITE' => 'morganite.webp',
+        'TANZANITE' => 'tanzanite.webp',
+        'EMERALD' => 'emerald.webp',
+        'RUBY' => 'ruby.webp',
+        'TOURMALIN' => 'tourmaline.webp',
+        'Other' => 'others-removebg-preview.png',
+        'Round' => 'round_n.webp',
+        'Emerald' => 'emerald_n.webp',
+        'Oval' => 'oval_n.webp',
+        'Square' => 'square_n.webp',
+        'Cushion' => 'cushion_n.webp',
+        'Baguette' => 'bag_1.webp',
+        'Pear' => 'pear_n.webp',
+        'Radiant' => 'radiant_n.webp',
+        'Brilliant' => 'Trilliant_Cut_icon_N.png',
+        'Marquise' => 'Trilliant_Cut_icon_N.webp',
+        'Heart' => 'Heart_Cut_icon_N.webp',
+        'solitaire' => 'head.png',
+        'Diamond Head' => 'diamond-head.png',
+        'Side stone' => 'side-stone.png',
+        'Need Advice' => 'others-removebg-preview.png',
+        'Gold' => 'gold.png',
+        'Yellow Gold' => 'yellow.png',
+        'White Gold' => 'white.png',
+        'Platinum' => 'platinum.png',
+    ];
+
+    $html_output = '<ul>';
 
     foreach ($post_metas as $key => $value) {
-        echo '<li> <strong>' . ucfirst($key) . '</strong>: <br> ' . esc_html($value[0]) . '</li>';
+        $clean_value = esc_html($value[0]);
+        $html_output .= "<li> <strong>" . ucfirst($key) . "</strong>: <br> $clean_value</li>";
 
-        // Stone Image
-        switch (esc_html($value[0])) {
-            case 'DIAMOND':
-                echo "<img src='https://goldjewelleryisland.com/wp-content/uploads/2024/03/diamond.webp' height='100' width='100'></img>";
-                break;
-            case 'LAB GROWN DIAMOND':
-                echo "<img src='https://goldjewelleryisland.com/wp-content/uploads/2024/03/grown-diamond.webp' height='100' width='100'></img>";
-                break;
-            case 'MOISSANITE':
-                echo "<img src='https://goldjewelleryisland.com/wp-content/uploads/2024/03/moissianite.webp' height='100' width='100'></img>";
-                break;
-            case 'SALT PEPPER Diamond':
-                echo "<img src='https://goldjewelleryisland.com/wp-content/uploads/2024/03/salt-diamond.webp' height='100' width='100'></img>";
-                break;
-            case 'SAPPHIRE':
-                echo "<img src='https://goldjewelleryisland.com/wp-content/uploads/2024/03/sapphire.webp' height='100' width='100'></img>";
-                break;
-            case 'MORGANITE':
-                echo "<img src='https://goldjewelleryisland.com/wp-content/uploads/2024/03/morganite.webp' height='100' width='100'></img>";
-                break;
-            case 'TANZANITE':
-                echo "<img src='https://goldjewelleryisland.com/wp-content/uploads/2024/03/tanzanite.webp' height='100' width='100'></img>";
-                break;
-            case 'EMERALD':
-                echo "<img src='https://goldjewelleryisland.com/wp-content/uploads/2024/03/emerald.webp' height='100' width='100'></img>";
-                break;
-            case 'RUBY':
-                echo "<img src='https://goldjewelleryisland.com/wp-content/uploads/2024/03/ruby.webp' height='100' width='100'></img>";
-                break;
-            case 'TOURMALIN':
-                echo "<img src='https://goldjewelleryisland.com/wp-content/uploads/2024/03/tourmaline.webp' height='100' width='100'></img>";
-                break;
-            case 'Other':
-                echo "<img src='https://goldjewelleryisland.com/wp-content/uploads/2024/03/others-removebg-preview.png' height='100' width='100'></img>";
-                break;
-            default:
-                break;
-        }
-        
-        // Shape Image
-        switch (esc_html($value[0])) {
-            case 'Round':
-                echo "<img src='https://goldjewelleryisland.com/wp-content/uploads/2024/03/round_n.webp' height='100' width='100'></img>";
-                break;
-            case 'Emerald':
-                echo "<img src='https://goldjewelleryisland.com/wp-content/uploads/2024/03/emerald_n.webp' height='100' width='100'></img>";
-                break;
-            case 'Oval':
-                echo "<img src='https://goldjewelleryisland.com/wp-content/uploads/2024/03/oval_n.webp' height='100' width='100'></img>";
-                break;
-            case 'Square':
-                echo "<img src='https://goldjewelleryisland.com/wp-content/uploads/2024/03/square_n.webp' height='100' width='100'></img>";
-                break;
-            case 'Cushion':
-                echo "<img src='https://goldjewelleryisland.com/wp-content/uploads/2024/03/cushion_n.webp' height='100' width='100'></img>";
-                break;
-            case 'Baguette':
-                echo "<img src='https://goldjewelleryisland.com/wp-content/uploads/2024/03/bag_1.webp' height='100' width='100'></img>";
-                break;
-            case 'Pear':
-                echo "<img src='https://goldjewelleryisland.com/wp-content/uploads/2024/03/pear_n.webp' height='100' width='100'></img>";
-                break;
-            case 'Radiant':
-                echo "<img src='https://goldjewelleryisland.com/wp-content/uploads/2024/03/radiant_n.webp' height='100' width='100'></img>";
-                break;
-            case 'Brilliant':
-                echo "<img src='https://shinyrockpolished.com/wp-content/themes/Avada-Child-Theme/img/Trilliant_Cut_icon_N.png' height='100' width='100'></img>";
-                break;
-            case 'Marquise':
-                echo "<img src='https://goldjewelleryisland.com/wp-content/uploads/2024/03/Trilliant_Cut_icon_N.webp' height='100' width='100'></img>";
-                break;
-            case 'Heart':
-                echo "<img src='https://goldjewelleryisland.com/wp-content/uploads/2024/03/Heart_Cut_icon_N.webp' height='100' width='100'></img>";
-                break;
-            case 'Other':
-                echo "<img src='https://goldjewelleryisland.com/wp-content/uploads/2024/03/others-removebg-preview.png' height='100' width='100'></img>";
-                break;
-            default:
-                break;
-        }
-        
-        // Style Image
-        switch (esc_html($value[0])) {
-            case 'solitaire':
-                echo "<img src='https://goldjewelleryisland.com/wp-content/uploads/2024/03/head.png' height='100' width='100'></img>";
-                break;
-            case 'Diamond Head':
-                echo "<img src='https://goldjewelleryisland.com/wp-content/uploads/2024/03/diamond-head.png' height='100' width='100'></img>";
-                break;
-            case 'Side stone':
-                echo "<img src='https://goldjewelleryisland.com/wp-content/uploads/2024/03/side-stone.png' height='100' width='100'></img>";
-                break;
-            case 'Need Advice':
-                echo "<img src='https://goldjewelleryisland.com/wp-content/uploads/2024/03/others-removebg-preview.png' height='100' width='100'></img>";
-                break;
-            default:
-                break;
+        // Check if value exists in image mapping array
+        if (array_key_exists($clean_value, $image_urls)) {
+            $image_url = $image_urls[$clean_value];
+            $html_output .= "<img src='https://goldjewelleryisland.com/wp-content/uploads/2024/03/$image_url' height='100' width='100'></img>";
         }
 
-        // Color Images
-        switch (esc_html($value[0])) {
-            case 'Gold':
-                echo "<img src='https://goldjewelleryisland.com/wp-content/uploads/2024/03/gold.png' height='100' width='100'></img>";
-                break;
-            case 'Yellow Gold':
-                echo "<img src='https://goldjewelleryisland.com/wp-content/uploads/2024/03/yellow.png' height='100' width='100'></img>";
-                break;
-            case 'White Gold':
-                echo "<img src='https://goldjewelleryisland.com/wp-content/uploads/2024/03/white.png' height='100' width='100'></img>";
-                break;
-            case 'Platinum':
-                echo "<img src='https://goldjewelleryisland.com/wp-content/uploads/2024/03/platinum.png' height='100' width='100'></img>";
-                break;
-            case 'Need Advice':
-                echo "<img src='https://goldjewelleryisland.com/wp-content/uploads/2024/03/others-removebg-preview.png' height='100' width='100'></img>";
-                break;
-            default:
-                break;
-        }
-        
-        echo '<hr>';
+        $html_output .= '<hr>';
     }
 
-    echo '</ul>';
+    $html_output .= '</ul>';
+
+    echo $html_output;
 }
+
 
 
 function show_ring_design_form()
