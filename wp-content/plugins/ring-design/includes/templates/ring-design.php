@@ -90,7 +90,7 @@
                                             <span class="radio-btn"><i class="las la-check"></i>
                                                 <div class="hobbies-icon">
                                                     <img
-                                                        src="https://shinyrockpolished.com/wp-content/themes/Avada-Child-Theme/img/stone_1.png">
+                                                        src="https://goldjewelleryisland.com/wp-content/uploads/2024/03/diamond.webp">
 
                                                 </div>
                                             </span>
@@ -101,7 +101,7 @@
                                             <span class="radio-btn"><i class="las la-check"></i>
                                                 <div class="hobbies-icon">
                                                     <img
-                                                        src="https://shinyrockpolished.com/wp-content/themes/Avada-Child-Theme/img/stone_2.png">
+                                                        src="https://goldjewelleryisland.com/wp-content/uploads/2024/03/grown-diamond.webp">
 
                                                 </div>
                                             </span>
@@ -112,7 +112,7 @@
                                             <span class="radio-btn"><i class="las la-check"></i>
                                                 <div class="hobbies-icon">
                                                     <img
-                                                        src="https://shinyrockpolished.com/wp-content/themes/Avada-Child-Theme/img/Moissanite_icon.png">
+                                                        src="https://goldjewelleryisland.com/wp-content/uploads/2024/03/moissianite.webp">
 
                                                 </div>
                                             </span>
@@ -123,7 +123,7 @@
                                             <span class="radio-btn"><i class="las la-check"></i>
                                                 <div class="hobbies-icon">
                                                     <img
-                                                        src="https://shinyrockpolished.com/wp-content/themes/Avada-Child-Theme/img/Salt_Pepper_icon.png">
+                                                        src="https://goldjewelleryisland.com/wp-content/uploads/2024/03/salt-diamond.webp">
 
                                                 </div>
                                             </span>
@@ -135,7 +135,7 @@
                                             <span class="radio-btn"><i class="las la-check"></i>
                                                 <div class="hobbies-icon">
                                                     <img
-                                                        src="https://shinyrockpolished.com/wp-content/themes/Avada-Child-Theme/img/stone_3.png">
+                                                        src="https://goldjewelleryisland.com/wp-content/uploads/2024/03/sapphire.webp">
 
                                                 </div>
                                             </span>
@@ -146,7 +146,7 @@
                                             <span class="radio-btn"><i class="las la-check"></i>
                                                 <div class="hobbies-icon">
                                                     <img
-                                                        src="https://shinyrockpolished.com/wp-content/themes/Avada-Child-Theme/img/stone_4.png">
+                                                        src="https://goldjewelleryisland.com/wp-content/uploads/2024/03/morganite.webp">
 
                                                 </div>
                                             </span>
@@ -157,7 +157,7 @@
                                             <span class="radio-btn"><i class="las la-check"></i>
                                                 <div class="hobbies-icon">
                                                     <img
-                                                        src="https://shinyrockpolished.com/wp-content/themes/Avada-Child-Theme/img/stone_5.png">
+                                                        src="https://goldjewelleryisland.com/wp-content/uploads/2024/03/tanzanite.webp">
 
                                                 </div>
                                             </span>
@@ -168,7 +168,7 @@
                                             <span class="radio-btn"><i class="las la-check"></i>
                                                 <div class="hobbies-icon">
                                                     <img
-                                                        src="https://shinyrockpolished.com/wp-content/themes/Avada-Child-Theme/img/stone_6.png">
+                                                        src="https://goldjewelleryisland.com/wp-content/uploads/2024/03/emerald.webp">
 
                                                 </div>
                                             </span>
@@ -179,7 +179,7 @@
                                             <span class="radio-btn"><i class="las la-check"></i>
                                                 <div class="hobbies-icon">
                                                     <img
-                                                        src="https://shinyrockpolished.com/wp-content/themes/Avada-Child-Theme/img/stone_7.png">
+                                                        src="https://goldjewelleryisland.com/wp-content/uploads/2024/03/ruby.webp">
 
                                                 </div>
                                             </span>
@@ -190,7 +190,7 @@
                                             <span class="radio-btn"><i class="las la-check"></i>
                                                 <div class="hobbies-icon">
                                                     <img
-                                                        src="https://shinyrockpolished.com/wp-content/themes/Avada-Child-Theme/img/Tourmaline_icon.png">
+                                                        src="https://goldjewelleryisland.com/wp-content/uploads/2024/03/sapphire.webp">
 
                                                 </div>
                                             </span>
@@ -201,7 +201,7 @@
                                             <span class="radio-btn"><i class="las la-check"></i>
                                                 <div class="hobbies-icon">
                                                     <img
-                                                        src="https://a0d.ae1.myftpupload.com/wp-content/uploads/2024/03/others-removebg-preview.png">
+                                                        src="https://goldjewelleryisland.com/wp-content/uploads/2024/03/others-removebg-preview.png">
 
                                                 </div>
                                             </span>
@@ -221,7 +221,7 @@
                                             <span class="radio-btn"><i class="las la-check"></i>
                                                 <div class="hobbies-icon">
                                                     <img
-                                                        src="https://shinyrockpolished.com/wp-content/themes/Avada-Child-Theme/img/round_n.png">
+                                                        src="https://goldjewelleryisland.com/wp-content/uploads/2024/03/round_n.webp">
 
                                                 </div>
                                             </span>
@@ -232,7 +232,7 @@
                                             <span class="radio-btn"><i class="las la-check"></i>
                                                 <div class="hobbies-icon">
                                                     <img
-                                                        src="https://shinyrockpolished.com/wp-content/themes/Avada-Child-Theme/img/emerald_n.png">
+                                                        src="https://goldjewelleryisland.com/wp-content/uploads/2024/03/emerald_n.webp">
 
                                                 </div>
                                             </span>
@@ -243,7 +243,7 @@
                                             <span class="radio-btn"><i class="las la-check"></i>
                                                 <div class="hobbies-icon">
                                                     <img
-                                                        src="https://shinyrockpolished.com/wp-content/themes/Avada-Child-Theme/img/oval_n.png">
+                                                        src="https://goldjewelleryisland.com/wp-content/uploads/2024/03/oval_n.webp">
 
                                                 </div>
                                             </span>
@@ -254,7 +254,7 @@
                                             <span class="radio-btn"><i class="las la-check"></i>
                                                 <div class="hobbies-icon">
                                                     <img
-                                                        src="https://shinyrockpolished.com/wp-content/themes/Avada-Child-Theme/img/square_n.png">
+                                                        src="https://goldjewelleryisland.com/wp-content/uploads/2024/03/square_n.webp">
 
                                                 </div>
                                             </span>
@@ -266,7 +266,7 @@
                                             <span class="radio-btn"><i class="las la-check"></i>
                                                 <div class="hobbies-icon">
                                                     <img
-                                                        src="https://shinyrockpolished.com/wp-content/themes/Avada-Child-Theme/img/cushion_n.png">
+                                                        src="https://goldjewelleryisland.com/wp-content/uploads/2024/03/cushion_n.webp">
 
                                                 </div>
                                             </span>
@@ -277,7 +277,7 @@
                                             <span class="radio-btn"><i class="las la-check"></i>
                                                 <div class="hobbies-icon">
                                                     <img
-                                                        src="https://shinyrockpolished.com/wp-content/themes/Avada-Child-Theme/img/bag_1.png">
+                                                        src="https://goldjewelleryisland.com/wp-content/uploads/2024/03/bag_1.webp">
 
                                                 </div>
                                             </span>
@@ -288,7 +288,7 @@
                                             <span class="radio-btn"><i class="las la-check"></i>
                                                 <div class="hobbies-icon">
                                                     <img
-                                                        src="https://shinyrockpolished.com/wp-content/themes/Avada-Child-Theme/img/pear_n.png">
+                                                        src="https://goldjewelleryisland.com/wp-content/uploads/2024/03/pear_n.webp">
 
                                                 </div>
                                             </span>
@@ -299,7 +299,7 @@
                                             <span class="radio-btn"><i class="las la-check"></i>
                                                 <div class="hobbies-icon">
                                                     <img
-                                                        src="https://shinyrockpolished.com/wp-content/themes/Avada-Child-Theme/img/radiant_n.png">
+                                                        src="https://goldjewelleryisland.com/wp-content/uploads/2024/03/radiant_n.webp">
 
                                                 </div>
                                             </span>
@@ -321,7 +321,7 @@
                                             <span class="radio-btn"><i class="las la-check"></i>
                                                 <div class="hobbies-icon">
                                                     <img
-                                                        src="https://shinyrockpolished.com/wp-content/themes/Avada-Child-Theme/img/Marquise_Cut_icon_N.png">
+                                                        src="https://goldjewelleryisland.com/wp-content/uploads/2024/03/Trilliant_Cut_icon_N.webp">
 
                                                 </div>
 
@@ -333,7 +333,7 @@
                                             <span class="radio-btn"><i class="las la-check"></i>
                                                 <div class="hobbies-icon">
                                                     <img
-                                                        src="https://shinyrockpolished.com/wp-content/themes/Avada-Child-Theme/img/Heart_Cut_icon_N.png">
+                                                        src="https://goldjewelleryisland.com/wp-content/uploads/2024/03/Heart_Cut_icon_N.webp">
 
                                                 </div>
                                             </span>
@@ -344,7 +344,7 @@
                                             <span class="radio-btn"><i class="las la-check"></i>
                                                 <div class="hobbies-icon">
                                                     <img
-                                                        src="https://a0d.ae1.myftpupload.com/wp-content/uploads/2024/03/others-removebg-preview.png">
+                                                        src="https://goldjewelleryisland.com/wp-content/uploads/2024/03/others-removebg-preview.png">
 
                                                 </div>
                                             </span>
@@ -365,7 +365,7 @@
                                             <span class="radio-btn"><i class="las la-check"></i>
                                                 <div class="hobbies-icon">
                                                     <img
-                                                        src="https://a0d.ae1.myftpupload.com/wp-content/uploads/2024/03/sq-removebg-preview.png">
+                                                        src="https://goldjewelleryisland.com/wp-content/uploads/2024/03/head.png">
                                                 </div>
                                             </span>
                                             <p class="f-12label">solitaire</p>
@@ -375,7 +375,7 @@
                                             <span class="radio-btn"><i class="las la-check"></i>
                                                 <div class="hobbies-icon">
                                                     <img
-                                                        src="https://a0d.ae1.myftpupload.com/wp-content/uploads/2024/03/diamond-head-removebg-preview.png">
+                                                        src="https://goldjewelleryisland.com/wp-content/uploads/2024/03/diamond-head.png">
                                                 </div>
                                             </span>
                                             <p class="f-12label">Diamond Head</p>
@@ -385,7 +385,7 @@
                                             <span class="radio-btn"><i class="las la-check"></i>
                                                 <div class="hobbies-icon">
                                                     <img
-                                                        src="https://a0d.ae1.myftpupload.com/wp-content/uploads/2024/03/diamond_head-removebg-preview.png">
+                                                        src="https://goldjewelleryisland.com/wp-content/uploads/2024/03/side-stone.png">
                                                 </div>
                                             </span>
                                             <p class="f-12label">Side stone</p>
@@ -395,7 +395,7 @@
                                             <span class="radio-btn"><i class="las la-check"></i>
                                                 <div class="hobbies-icon">
                                                     <img
-                                                        src="https://a0d.ae1.myftpupload.com/wp-content/uploads/2024/03/others-removebg-preview.png">
+                                                        src="https://goldjewelleryisland.com/wp-content/uploads/2024/03/others-removebg-preview.png">
                                                 </div>
                                             </span>
                                             <p class="f-12label">Need Advice</p>
@@ -416,7 +416,7 @@
                                             <span class="radio-btn"><i class="las la-check"></i>
                                                 <div class="hobbies-icon">
                                                     <img
-                                                        src="https://a0d.ae1.myftpupload.com/wp-content/uploads/2024/03/gold.png">
+                                                        src="https://goldjewelleryisland.com/wp-content/uploads/2024/03/gold.png">
                                                 </div>
                                             </span>
                                             <p class="f-12label">Gold</p>
@@ -426,7 +426,7 @@
                                             <span class="radio-btn"><i class="las la-check"></i>
                                                 <div class="hobbies-icon">
                                                     <img
-                                                        src="https://a0d.ae1.myftpupload.com/wp-content/uploads/2024/03/yellow.png">
+                                                        src="https://goldjewelleryisland.com/wp-content/uploads/2024/03/yellow.png">
                                                 </div>
                                             </span>
                                             <p class="f-12label">Yellow Gold</p>
@@ -436,7 +436,7 @@
                                             <span class="radio-btn"><i class="las la-check"></i>
                                                 <div class="hobbies-icon">
                                                     <img
-                                                        src="https://a0d.ae1.myftpupload.com/wp-content/uploads/2024/03/platinum.png">
+                                                        src="https://goldjewelleryisland.com/wp-content/uploads/2024/03/white.png">
                                                 </div>
                                             </span>
                                             <p class="f-12label">White Gold</p>
@@ -446,7 +446,7 @@
                                             <span class="radio-btn"><i class="las la-check"></i>
                                                 <div class="hobbies-icon">
                                                     <img
-                                                        src="https://a0d.ae1.myftpupload.com/wp-content/uploads/2024/03/platinum.png">
+                                                        src="https://goldjewelleryisland.com/wp-content/uploads/2024/03/platinum.png">
                                                 </div>
                                             </span>
                                             <p class="f-12label">Platinum</p>
