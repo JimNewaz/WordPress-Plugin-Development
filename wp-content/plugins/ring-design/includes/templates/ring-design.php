@@ -30,14 +30,11 @@
             <div class="col-lg-4 offset-lg-1 mx-0 px-0">
                 <!-- TITLE -->
                 <div id="title-container">
-                    <img class="covid-image" src="https://a0d.ae1.myftpupload.com/wp-content/uploads/2024/03/ring.png">
+                    <img class="covid-image mt-5" src="https://a0d.ae1.myftpupload.com/wp-content/uploads/2024/03/ring.png">
 
                     <h3>DESIGN YOUR RING</h3>
 
-                    <p class="text-center">Design the most beautiful engagement or cocktail ring! We use only the finest
-                        quality diamonds
-                        and
-                        gemstones to make the perfect ring just for you!</p>
+                    <p class="text-center">Fill all form fields to go to next step</p>
                 </div>
 
             </div>
@@ -521,7 +518,7 @@
                             </div>
 
                             <!-- Success -->
-                            <div id="success" class="w-100">
+                            <div id="success" class="w-100">                                
                             </div>
                             <div id="error" class="w-100">
                             </div>

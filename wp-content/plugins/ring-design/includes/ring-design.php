@@ -63,7 +63,7 @@ function display_submissions() {
         // Check if value exists in image mapping array
         if (array_key_exists($clean_value, $image_urls)) {
             $image_url = $image_urls[$clean_value];
-            $html_output .= "<img src='https://goldjewelleryisland.com/wp-content/uploads/2024/03/$image_url' height='100' width='100'></img>";
+            $html_output .= "<img src='https://goldjewelleryisland.com/wp-content/uploads/2024/03/$image_url' height='100' ></img>";
         }
 
         $html_output .= '<hr>';
@@ -225,7 +225,9 @@ function handle_enquiry($data)
                                             </div>
                                         </div>
                                         <br>
-                                        <h3 class = "text-center">Thank You! <br> We will contact you soon.</h3>
+                                        <h3 class = "text-center">Thank You! <br> We will get back to you soon.</h3>
+                                        <br>
+                                        <a class="back-link" href="">Go back from the beginning ➜</a>
                                     </div>
                                 </div>
                             ', 200);
