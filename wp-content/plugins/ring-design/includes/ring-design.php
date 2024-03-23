@@ -207,7 +207,7 @@ function handle_enquiry($data)
         }
 
         add_post_meta($post_id, $label, sanitize_text_field($value));
-        $message = '<strong>' . sanitize_text_field(ucfirst($label)) . '</strong: ' . $value . '<br>';
+        $message .= '<strong>' . sanitize_text_field(ucfirst($label)) . '</strong: ' . $value . '<br>';
     }
 
     wp_mail($reciepient_email, $subject, $message, $headers);
