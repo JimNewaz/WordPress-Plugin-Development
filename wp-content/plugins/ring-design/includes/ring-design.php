@@ -182,7 +182,7 @@ function handle_enquiry($data)
     $headers[] = "Content-Type: text/html";
 
     $message = '';
-    $message = "<h1> Message has been sent from:" . $field_fname . "</h1>";
+    $message = "<h1> New Customize Ring :" . $field_fname . "</h1>";
 
     $subject = 'New enquiery from:' . $field_fname;
 
@@ -207,10 +207,13 @@ function handle_enquiry($data)
         }
 
         add_post_meta($post_id, $label, sanitize_text_field($value));
-        $message .= '<strong>' . sanitize_text_field(ucfirst($label)) . '</strong: ' . $value . '<br>';
+        
+        $message .= '<p><strong>' . sanitize_text_field(ucfirst($label)) . '</strong>: ' . $value . '</p>';
     }
 
     wp_mail($reciepient_email, $subject, $message, $headers);
+
+    // Send Mail to the Form Sumitter 
 
 
     $response = new WP_REST_Response('
