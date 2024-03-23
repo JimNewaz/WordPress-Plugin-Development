@@ -14,11 +14,13 @@ function load_carbon_fields()
 
 function create_options_page()
 {
-    Container::make('theme_options', __('Ring Design'))
-        ->add_fields(array(
-            Field::make('checkbox', 'ring_design_plugin_active', __('Active')),
-            Field::make('text', 'ring_design_recipient_email', __('Recipient Email'))->set_attribute('placeholder', 'example@example.com'),
-            Field::make('textarea', 'ring_design_message', __('Confirmation Message'))->set_attribute('placeholder', 'Thank you for submitting the form')
-                ->set_help_text('Type the message you want the submitter to recieve')
-        ));
+    $main_options_container = 
+        Container::make('theme_options', __('Ring Design'))
+            ->set_icon( 'dashicons-superhero-alt' )
+            ->add_fields(array(
+                Field::make('checkbox', 'ring_design_plugin_active', __('Active')),
+                Field::make('text', 'ring_design_recipient_email', __('Recipient Email'))->set_attribute('placeholder', 'example@example.com'),
+                Field::make('textarea', 'ring_design_message', __('Confirmation Message'))->set_attribute('placeholder', 'Thank you for submitting the form')
+                    ->set_help_text('Type the message you want the submitter to recieve')
+            ));  
 }

@@ -60,7 +60,6 @@ function enqueue_scripts() {
     wp_enqueue_script('ring-design-plugin', MY_PLUGIN_URL . 'assets/js/script.js', array('jquery'), null, true);
 }
 
-
 function create_submissions_page()
 {
     $args = [
@@ -83,8 +82,6 @@ function create_submissions_page()
 
     register_post_type('submission', $args);
 }
-
-
 
 function handle_enquiry($data)
 {
@@ -188,3 +185,139 @@ function handle_enquiry($data)
 
     return $response;
 }
+
+
+
+// Stones 
+
+// Add custom post type for stones
+add_action('init', 'create_stone_post_type');
+
+function create_stone_post_type() {
+    register_post_type('stone',
+        array(
+            'labels' => array(
+                'name' => __('Stones'),
+                'singular_name' => __('Stone'),
+                'edit_item' => 'View Stone'
+            ),
+            'public' => true,
+            'has_archive' => true,
+            'publicly_queryable' => false,      
+            'menu_icon' => 'dashicons-superhero-alt', 
+            'supports' => false,
+        )
+    );
+}
+
+// Add meta boxes for custom fields
+add_action('add_meta_boxes', 'add_stone_meta_boxes');
+function add_stone_meta_boxes() {
+    add_meta_box('stone_text_field', __('Text Field'), 'render_stone_text_field', 'stone');
+    add_meta_box('stone_image_field', __('Image Field'), 'render_stone_image_field', 'stone');
+    add_meta_box('stone_description_field', __('Description Field'), 'render_stone_description_field', 'stone');
+}
+
+function render_stone_text_field($post) {
+
+    wp_nonce_field('stone_meta_box', 'stone_meta_box_nonce');
+
+    $value = get_post_meta($post->ID, 'stone_text_field', true);
+    echo '<input type="text" name="stone_text_field" value="' . esc_attr($value) . '" />';
+}
+
+
+function render_stone_image_field($post) {
+    // Output the nonce field
+    wp_nonce_field('stone_meta_box', 'stone_meta_box_nonce');
+    
+    $image_id = get_post_meta($post->ID, 'stone_image_field', true);
+    $image_url = wp_get_attachment_image_url($image_id, 'thumbnail');
+    ?>
+    <div class="stone-image-preview">
+        <?php if ($image_url): ?>
+            <img src="<?php echo esc_url($image_url); ?>" style="max-width: 200px; max-height: 200px;" />
+        <?php else: ?>
+            <p>No image selected</p>
+        <?php endif; ?>
+    </div>
+    <input type="hidden" name="stone_image_field" id="stone_image_field_image" value="<?php echo ($image_id); ?>" />
+    
+    <button type="button" id="choose_image_button" class="button">Choose Image</button>
+
+    <script>
+    jQuery(document).ready(function($) {
+        $('#choose_image_button').click(function(e) {
+            e.preventDefault();
+            var custom_uploader = wp.media({
+                type:'image',
+                title: 'Choose Image',
+                button: {
+                    text: 'Choose Image'
+                },
+                multiple: false
+            })
+            .on('select', function() {
+                var attachment = custom_uploader.state().get('selection').first().toJSON();                
+                
+                $('#stone_image_field_image').val(attachment.id);
+                $('.stone-image-preview').html('<img src="' + attachment.sizes.thumbnail.url + '" style="max-width: 200px; max-height: 200px;" />');
+            })
+            .open();
+        });
+    });
+    </script>
+    <?php
+}
+
+function render_stone_description_field($post) {
+    wp_nonce_field('stone_meta_box', 'stone_meta_box_nonce');
+
+    $description = get_post_meta($post->ID, 'stone_description_field', true);
+    echo '<textarea name="stone_description_field">' . esc_textarea($description) . '</textarea>';
+}
+
+// Save stone meta box data
+add_action('save_post', 'save_stone_meta_data');
+function save_stone_meta_data($post_id) {
+    // Verify nonce
+    if (!isset($_POST['stone_meta_box_nonce']) || !wp_verify_nonce($_POST['stone_meta_box_nonce'], 'stone_meta_box')) {
+        return;
+    }
+
+    // Check autosave
+    if (defined('DOING_AUTOSAVE') && DOING_AUTOSAVE) {
+        return;
+    }
+
+    // Check permissions
+    if (!current_user_can('edit_post', $post_id)) {
+        return;
+    }
+
+    // Save stone text field
+    if (isset($_POST['stone_text_field'])) {
+        update_post_meta($post_id, 'stone_text_field', sanitize_text_field($_POST['stone_text_field']));
+    }
+
+    // Save stone description field
+    if (isset($_POST['stone_description_field'])) {
+        update_post_meta($post_id, 'stone_description_field', sanitize_text_field($_POST['stone_description_field']));
+    }
+
+    // Save stone image field
+    if (isset($_POST['stone_image_field'])) {
+        update_post_meta($post_id, 'stone_image_field', intval($_POST['stone_image_field']));
+    }
+}
+
+
+add_action('pre_get_posts', 'custom_modify_stones_query');
+function custom_modify_stones_query($query) {
+    // Check if on the stones list page and main query
+    if (is_admin() && $query->is_main_query() && $query->get('post_type') === 'stone') {
+        // Include both published and draft stones
+        $query->set('post_status', array('publish', 'draft'));
+    }
+}
+

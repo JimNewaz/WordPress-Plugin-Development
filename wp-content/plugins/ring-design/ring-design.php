@@ -29,8 +29,13 @@ if(!class_exists('CustomRingDesign')){
             include_once MY_PLUGIN_PATH . 'includes/options-page.php';
             include_once MY_PLUGIN_PATH . 'includes/ring-design.php';
         }
+        
     }
     
     $customRingDesign = new CustomRingDesign;
-    $customRingDesign->initialize();
+    $customRingDesign->initialize();  
+
+    
+    
 }
+
